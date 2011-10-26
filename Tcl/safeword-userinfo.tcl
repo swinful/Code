@@ -6,8 +6,9 @@
 # set Email [<winful> <at> <gmail> <dot> <com>]
 #==============================================================================
 # Description(s):
+#
 # The script reads a safeword backup (.ldif) file to determine which tokens are
-# assigned to users. The ldif was tested against that procuded by Safeword 2008
+# assigned to which users. Tested with backups procuded by Safeword 2008.
 #
 # The following line restarts using tclsh \
   exec tclsh8.4 "$0" ${1+"$@"}
