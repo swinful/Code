@@ -26,9 +26,6 @@ proc code_cracklepop {} {
 # divisible_by =======================================================
 proc divisible_by { {three 3} {five 5} aNumber } {
 
-  set divisible_by_three false
-  set divisible_by_five false
-
   if {[expr $aNumber % 3] == 0 && [expr $aNumber % 5] == 0} {
     puts "CracklePop"
   } elseif {[expr $aNumber % 3] == 0 } {
