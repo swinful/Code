@@ -32,10 +32,9 @@ proc create_perkas_json {theRole theResume} {
     explaination  {Made with tcl} \
     projects      [ list \
                       {https://github.com/swinful} \
-                      {http://wellrounded.wordpress.com} \
-                      {http://winful.com/resume/} 
+                      {http://wellrounded.wordpress.com} 
                   ] \
-    source       {Rowan University csjobs mailing-list via Dr. Andrea F. Lobo (former CS Advisor)} \
+    source       {-- Fill with how your heard about role. --} \
     resume       [base64_encode $theResume]
   ]
   return [tcl2json $ourObject]
@@ -89,10 +88,3 @@ set json_object [create_perkas_json $position_id $resume_file]
 set tcljson_object [json::json2dict $json_object]
 
 test_http_conn $json_object
-
-##
-# Able to successfully decode encoded resume
-# set encoded_resume [lindex $tcljson_object 15]
-# set decoded_resume [base64::decode $encoded_resume]
-# puts $decoded_resume
-##
