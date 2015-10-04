@@ -109,6 +109,17 @@ _convertISO() {
         ;;
     esac
 
+  else
+    # Note: Refactor this duplicate later
+    ${HDIUTIL} convert -format UDRW -o ${DMG_IMG_HEAD} ${ISO_IMG}
+    if [ $? -eq 0 ]; then
+      echo 'Done.'
+    else
+      echo 'Abort. Please check the command for converting the iso image.'
+      echo "${HDIUTIL} convert -format UDRW -o ${DMG_IMG} ${ISO_IMG}"
+      exit 1
+    fi
+
   fi
 }
 
