@@ -167,17 +167,21 @@ _flashMedia() {
   esac
 }
 
+_run() {
+  _preempt
+  _selectExternalDisk
+  _selectISOImage
+  _convertISO
+  _promptForMedia
+  _selectExternalDisk
+  _unmountSelectedDisk
+  _flashMedia
+}
+
 
 # Main
 # ---------
-_preempt
-_selectExternalDisk
-_selectISOImage
-_convertISO
-_promptForMedia
-_selectExternalDisk
-_unmountSelectedDisk
-_flashMedia
+run
 
 # ----
 # Author: Samuel A. WINFUL <samuel@winful.com>
