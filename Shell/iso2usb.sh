@@ -20,7 +20,7 @@ _preempt() {
       ;;
     *)
       echo ''
-      echo  "===>>> ${OS_TYPE} not supported"
+      echo  "===>>> ${OS_TYPE} not supported. Please run on Mac OSX"
       echo ''
       exit 1;
       ;;
@@ -192,7 +192,7 @@ _run() {
 
 # Main
 # ---------
-run
+_run
 
 # ----
 # Author: Samuel A. WINFUL <samuel@winful.com>
