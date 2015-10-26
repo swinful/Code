@@ -48,7 +48,6 @@ _preempt() {
 }
 
 _selectExternalDisk() {
-
   if [ -z ${SELECTED_DISK} ]; then
     # Note: we grep for 'extern[al]' to avoid any accidents with internal disks.
     EXTERN_DISKS="`${DISKUTIL} list|grep 'extern'|awk '{print $1}'|paste -s -d' ' -`"
@@ -192,7 +191,7 @@ _run() {
 
 # Main
 # ---------
-run
+_run
 
 # ----
 # Author: Samuel A. WINFUL <samuel@winful.com>
