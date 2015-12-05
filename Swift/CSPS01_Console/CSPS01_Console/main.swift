@@ -13,7 +13,9 @@
 let lab01Assignment = Lab01()
 let lab02Assignment = Lab02()
 let lab03Assignment = Lab03()
+let lab04Assignment = Lab04()
 
 // lab01Assignment.run()
 // lab02Assignment.run()
-lab03Assignment.run()
+// lab03Assignment.run()
+lab04Assignment.run()
