@@ -126,12 +126,30 @@ class Lab04 {
     print("")
   }
   
+  // MARK: Problem Seven
+  func problemSeven() {
+    IO.promptInput(with: "Please enter a sentence terminated by a period: ")
+    let string = IO.getInput() as String
+    var vowelCount = 0
+    
+    for char in string.characters {
+      switch char {
+      case "A", "a", "E", "e", "I", "i", "O", "o", "U", "u":
+        vowelCount++
+      default: continue
+        
+      }
+    }
+    print("Your sentence contains \(vowelCount) vowels.")
+  }
+  
   // MARK: Main run
   func run() {
     // problemTwo()
     // problemThree()
     // problemFour()
     // problemFive()
-    problemSix()
+    // problemSix()
+    problemSeven()
   }
 }
