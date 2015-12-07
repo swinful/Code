@@ -96,6 +96,7 @@ class Lab04 {
   
   // MARK: Problem Four
   func problemFour() {
+    IO.promptInput(with: "\n\nLab 4, Assignment #4\n")
     positiveInteger = askForPositiveInteger()
     for _ in 1...positiveInteger {
       IO.promptInput(with: "1")
@@ -105,6 +106,7 @@ class Lab04 {
   
   // MARK: Problem Five
   func problemFive() {
+    IO.promptInput(with: "\n\nLab 4, Assignment #5\n")
     positiveInteger = askForPositiveInteger()
     
     if positiveInteger > 0 {
@@ -117,6 +119,7 @@ class Lab04 {
   
   // MARK: Problem Six
   func problemSix() {
+    IO.promptInput(with: "\n\nLab 4, Assignment #6\n")
     var character: Character
     (positiveInteger, character) = askForPositiveIntegerWithCharacter()
     
@@ -128,6 +131,7 @@ class Lab04 {
   
   // MARK: Problem Seven
   func problemSeven() {
+    IO.promptInput(with: "\n\nLab 4, Assignment #7\n")
     IO.promptInput(with: "Please enter a sentence terminated by a period: ")
     let string = IO.getInput() as String
     var vowelCount = 0
@@ -145,11 +149,11 @@ class Lab04 {
   
   // MARK: Main run
   func run() {
-    // problemTwo()
-    // problemThree()
-    // problemFour()
-    // problemFive()
-    // problemSix()
+    problemTwo()
+    problemThree()
+    problemFour()
+    problemFive()
+    problemSix()
     problemSeven()
   }
 }
