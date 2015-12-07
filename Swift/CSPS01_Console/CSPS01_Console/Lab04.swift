@@ -30,8 +30,29 @@ import Foundation
 
 class Lab04 {
   
-  // MARK: Common Variables
+  // MARK: Common Problem Variables
   var positiveInteger = 0
+  var character: Character = "*"
+  
+  // MARK: Common Member Function Variables
+  func askForPositiveIntegerWithCharacter() -> (Int, Character) {
+   let ourInteger = askForPositiveInteger()
+    IO.promptInput(with: "Enter a single character: ")
+    let ourCharString = IO.getInput() as String
+    let ourChar = ourCharString[ourCharString.startIndex]
+    
+    return (ourInteger, ourChar)
+  }
+  
+  func askForPositiveInteger() -> Int {
+    IO.promptInput(with: "Enter a Positive Integer: ")
+    positiveInteger = IO.getInput().integerValue
+    while positiveInteger < 1 {
+      IO.promptInput(with: "Enter Positive Integer: ")
+      positiveInteger = IO.getInput().integerValue
+    }
+    return positiveInteger
+  }
   
   // MARK: Problem One
   
@@ -75,31 +96,34 @@ class Lab04 {
   
   // MARK: Problem Four
   func problemFour() {
-    IO.promptInput(with: "Enter positive integer: ")
-    let posInt = IO.getInput().integerValue
-    for _ in 1...posInt {
+    positiveInteger = askForPositiveInteger()
+    for _ in 1...positiveInteger {
       IO.promptInput(with: "1")
     }
     print("")
-    
   }
   
   // MARK: Problem Five
   func problemFive() {
-    IO.promptInput(with: "Enter Positive Integer: ")
-    positiveInteger = IO.getInput().integerValue
-    while positiveInteger < 1 {
-      IO.promptInput(with: "Enter Positive Integer: ")
-      positiveInteger = IO.getInput().integerValue
-    }
+    positiveInteger = askForPositiveInteger()
     
     if positiveInteger > 0 {
       for i in 1...positiveInteger {
         IO.promptInput(with: "\(i)")
       }
     }
+    print("\n")
+  }
+  
+  // MARK: Problem Six
+  func problemSix() {
+    var character: Character
+    (positiveInteger, character) = askForPositiveIntegerWithCharacter()
     
-    
+    for _ in 1...positiveInteger {
+      IO.promptInput(with: "\(character)")
+    }
+    print("")
   }
   
   // MARK: Main run
@@ -107,6 +131,7 @@ class Lab04 {
     // problemTwo()
     // problemThree()
     // problemFour()
-    problemFive()
+    // problemFive()
+    problemSix()
   }
 }
