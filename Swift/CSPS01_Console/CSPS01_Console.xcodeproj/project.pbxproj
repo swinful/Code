@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CC06DDE61C16562F00B1FC28 /* Lab05.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC06DDE51C16562F00B1FC28 /* Lab05.swift */; };
 		CC0E16D81C066F2300F81DAF /* Lab03.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0E16D71C066F2300F81DAF /* Lab03.swift */; };
 		CC542F991BCA2BAF0005FA95 /* IO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC542F981BCA2BAF0005FA95 /* IO.swift */; };
 		CC8795541BFE94E9007A034F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC8795531BFE94E9007A034F /* Constants.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		CC06DDE51C16562F00B1FC28 /* Lab05.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lab05.swift; sourceTree = "<group>"; };
 		CC0E16D71C066F2300F81DAF /* Lab03.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lab03.swift; sourceTree = "<group>"; };
 		CC542F911BCA2A8B0005FA95 /* testTarget */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = testTarget; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC542F981BCA2BAF0005FA95 /* IO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IO.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 				CCA5C9721A3DC71900CA8395 /* Lab02.swift */,
 				CC0E16D71C066F2300F81DAF /* Lab03.swift */,
 				CCABF8201C11D36F0037CE69 /* Lab04.swift */,
+				CC06DDE51C16562F00B1FC28 /* Lab05.swift */,
 				CC542F981BCA2BAF0005FA95 /* IO.swift */,
 				CC8795531BFE94E9007A034F /* Constants.swift */,
 			);
@@ -186,6 +189,7 @@
 			files = (
 				CC8795541BFE94E9007A034F /* Constants.swift in Sources */,
 				CCADBEF91A3D4F99008F6E29 /* Lab01.swift in Sources */,
+				CC06DDE61C16562F00B1FC28 /* Lab05.swift in Sources */,
 				CC0E16D81C066F2300F81DAF /* Lab03.swift in Sources */,
 				CCADBEF21A3D4F39008F6E29 /* main.swift in Sources */,
 				CCABF8211C11D36F0037CE69 /* Lab04.swift in Sources */,
