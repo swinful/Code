@@ -116,10 +116,43 @@ class Lab06 {
     printByTwos(getOddInt(), larger: getOddInt())
   }
   
+  // MARK: Problem Four
+  func getPositiveDouble() -> Double {
+    IO.promptInput(with: "Please enter a positive double: ")
+    var positiveDouble = IO.getInput().doubleValue
+    
+    while positiveDouble < 0.0 {
+      IO.promptInput(with: "Please enter a positive double: ")
+      positiveDouble = IO.getInput().doubleValue
+    }
+    return positiveDouble
+  }
+  
+  func min(num1: Double, num2: Double) -> Double {
+    if num1 >= num2 {
+      return num2
+    } else {
+      return num1
+    }
+  }
+  
+  func problemFour() {
+    var smallest = getPositiveDouble()
+    
+    for _ in 1...3 {
+      let positiveDouble = getPositiveDouble()
+      if positiveDouble < smallest {
+        smallest = positiveDouble
+      }
+    }
+    print("The smallest double was: \(smallest)")
+  }
+  
   func run() {
     // problemOne()
     // problemTwo()
-    problemThree()
+    // problemThree()
+    problemFour()
   }
 
 }
