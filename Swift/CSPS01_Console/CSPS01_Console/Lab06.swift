@@ -148,11 +148,62 @@ class Lab06 {
     print("The smallest double was: \(smallest)")
   }
   
+  // MARK: Problem Five
+  func getPositiveInt() -> Int {
+    let message = "Please enter a positive integer: "
+    
+    IO.promptInput(with: message)
+    var positiveInteger = IO.getInput().integerValue
+    
+    while positiveInteger < 0 {
+      IO.promptInput(with: message)
+      positiveInteger = IO.getInput().integerValue
+    }
+    return positiveInteger
+  }
+  func getSymbolCharacter() -> Character {
+    let message = "Please enter a symbol: "
+    IO.promptInput(with: message)
+    let symbolString = String(IO.getInput())
+    let symbol = symbolString[symbolString.startIndex]
+    return symbol
+  }
+  
+  func drawLine(repeats: Int, symbol: Character) {
+    for _ in 0..<repeats {
+      IO.promptInput(with: "\(symbol)")
+    }
+    print("")
+  }
+  
+  func problemFive() {
+    let positiveInteger = getPositiveInt()
+    let symbol = getSymbolCharacter()
+    
+    for i in 1...positiveInteger {
+      drawLine(i, symbol: symbol)
+    }
+  }
+  
+  
   func run() {
     // problemOne()
     // problemTwo()
     // problemThree()
-    problemFour()
+    // problemFour()
+    problemFive()
   }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
