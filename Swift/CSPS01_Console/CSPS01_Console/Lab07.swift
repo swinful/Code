@@ -54,8 +54,39 @@ class Lab07 {
     secondsPastMidNight(hours: hours, minutes: minutes, seconds: seconds)
   }
   
+  // MARK: Problem Four
+  
+  func isEven(n: Int) -> Bool {
+    return n % 2 == 0
+  }
+  
+  func hailstones(n: Int) -> Int {
+    if isEven(n) {
+      return n / 2
+    } else {
+      return 3 * n + 1
+    }
+  }
+  
+  func problemFour() {
+    
+    IO.promptInput(with: "Please enter starting number: ")
+    var startNumber = IO.getInput().integerValue
+    
+    IO.promptInput(with: "Please enter number of hailstones: ")
+    let numberOfHailstones = IO.getInput().integerValue
+    
+    IO.promptInput(with: "\(numberOfHailstones) hailstones starting at \(startNumber) are: ")
+    for _ in 0..<numberOfHailstones {
+      startNumber = hailstones(startNumber)
+      IO.promptInput(with: "\(startNumber) ")
+    }
+    print("")
+  }
+  
   func run() {
-    problemThree()
+    // problemThree()
+    problemFour()
   }
 }
 
