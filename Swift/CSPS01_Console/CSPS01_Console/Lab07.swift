@@ -84,9 +84,32 @@ class Lab07 {
     print("")
   }
   
+  // MARK: Problem Five
+  func isLeapYear(year: Int) -> Bool {
+    var outcome = false
+    if year % 4 == 0 {
+      outcome = true
+      if year % 100 == 0 && year % 400 != 0 {
+        outcome = false
+      }
+    }
+    return outcome
+  }
+  
+  func problemFive() {
+    IO.promptInput(with: "Please enter a year: ")
+    let year = IO.getInput().integerValue
+    if isLeapYear(year) {
+      print("\(year) is a leap year.")
+    } else {
+      print("\(year) is NOT a leap year.")
+    }
+  }
+  
   func run() {
     // problemThree()
-    problemFour()
+    // problemFour()
+    problemFive()
   }
 }
 
