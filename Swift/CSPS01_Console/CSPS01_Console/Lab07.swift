@@ -50,6 +50,7 @@ class Lab07 {
   }
   
   func problemThree() {
+    IO.promptInput(with: "\n\nLab 7, Assignment #3\n")
     let (hours, minutes, seconds) = tupleOfThreeInts()
     secondsPastMidNight(hours: hours, minutes: minutes, seconds: seconds)
   }
@@ -69,7 +70,7 @@ class Lab07 {
   }
   
   func problemFour() {
-    
+    IO.promptInput(with: "\n\nLab 7, Assignment #4\n")
     IO.promptInput(with: "Please enter starting number: ")
     var startNumber = IO.getInput().integerValue
     
@@ -97,6 +98,7 @@ class Lab07 {
   }
   
   func problemFive() {
+    IO.promptInput(with: "\n\nLab 7, Assignment #5\n")
     IO.promptInput(with: "Please enter a year: ")
     let year = IO.getInput().integerValue
     if isLeapYear(year) {
@@ -107,9 +109,8 @@ class Lab07 {
   }
   
   func run() {
-    // problemThree()
-    // problemFour()
+    problemThree()
+    problemFour()
     problemFive()
   }
 }
-

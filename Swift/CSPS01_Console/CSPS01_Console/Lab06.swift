@@ -56,6 +56,7 @@ class Lab06 {
 
   // MARK: Problem One
   func problemOne() {
+    IO.promptInput(with: "\n\nLab 6, Assignment #1\n")
     IO.promptInput(with: "Please enter a word beginning and ending with a *: ")
     let stringValue = String(IO.getInput()).uppercaseString
     print("\(stringValue)")
@@ -77,6 +78,7 @@ class Lab06 {
   }
 
   func problemTwo() {
+    IO.promptInput(with: "\n\nLab 6, Assignment #2\n")
     IO.promptInput(with: "Please enter a word beginning and ending with a *: ")
     let stringValue = String(IO.getInput())
     for character in stringValue.characters {
@@ -113,6 +115,7 @@ class Lab06 {
   }
 
   func problemThree() {
+    IO.promptInput(with: "\n\nLab 6, Assignment #3\n")
     printByTwos(getOddInt(), larger: getOddInt())
   }
   
@@ -137,6 +140,7 @@ class Lab06 {
   }
   
   func problemFour() {
+    IO.promptInput(with: "\n\nLab 6, Assignment #4\n")
     var smallest = getPositiveDouble()
     
     for _ in 1...3 {
@@ -150,6 +154,7 @@ class Lab06 {
   
   // MARK: Problem Five
   func getPositiveInt() -> Int {
+    IO.promptInput(with: "\n\nLab 6, Assignment #5\n")
     let message = "Please enter a positive integer: "
     
     IO.promptInput(with: message)
@@ -161,6 +166,7 @@ class Lab06 {
     }
     return positiveInteger
   }
+  
   func getSymbolCharacter() -> Character {
     let message = "Please enter a symbol: "
     IO.promptInput(with: message)
@@ -187,23 +193,11 @@ class Lab06 {
   
   
   func run() {
-    // problemOne()
-    // problemTwo()
-    // problemThree()
-    // problemFour()
+    problemOne()
+    problemTwo()
+    problemThree()
+    problemFour()
     problemFive()
   }
-
 }
-
-
-
-
-
-
-
-
-
-
-
 
