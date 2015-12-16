@@ -21,6 +21,11 @@ class IO {
     
     return inputStr!
   }
-  
-  
+}
+
+extension NSString {
+  func characterValue() -> Character {
+    let ourString = String(self)
+    return ourString[ourString.startIndex]
+  }
 }
