@@ -120,16 +120,6 @@ class Lab06 {
   }
   
   // MARK: Problem Four
-  func getPositiveDouble() -> Double {
-    IO.promptInput(with: "Please enter a positive double: ")
-    var positiveDouble = IO.getInput().doubleValue
-    
-    while positiveDouble < 0.0 {
-      IO.promptInput(with: "Please enter a positive double: ")
-      positiveDouble = IO.getInput().doubleValue
-    }
-    return positiveDouble
-  }
   
   func min(num1: Double, num2: Double) -> Double {
     if num1 >= num2 {
@@ -141,10 +131,10 @@ class Lab06 {
   
   func problemFour() {
     IO.promptInput(with: "\n\nLab 6, Assignment #4\n")
-    var smallest = getPositiveDouble()
+    var smallest = IO.getPositiveDouble()
     
     for _ in 1...3 {
-      let positiveDouble = getPositiveDouble()
+      let positiveDouble = IO.getPositiveDouble()
       if positiveDouble < smallest {
         smallest = positiveDouble
       }
@@ -153,20 +143,6 @@ class Lab06 {
   }
   
   // MARK: Problem Five
-  func getPositiveInt() -> Int {
-    IO.promptInput(with: "\n\nLab 6, Assignment #5\n")
-    let message = "Please enter a positive integer: "
-    
-    IO.promptInput(with: message)
-    var positiveInteger = IO.getInput().integerValue
-    
-    while positiveInteger < 0 {
-      IO.promptInput(with: message)
-      positiveInteger = IO.getInput().integerValue
-    }
-    return positiveInteger
-  }
-  
   func getSymbolCharacter() -> Character {
     let message = "Please enter a symbol: "
     IO.promptInput(with: message)
@@ -183,7 +159,7 @@ class Lab06 {
   }
   
   func problemFive() {
-    let positiveInteger = getPositiveInt()
+    let positiveInteger = IO.getPositiveInteger()
     let symbol = getSymbolCharacter()
     
     for i in 1...positiveInteger {

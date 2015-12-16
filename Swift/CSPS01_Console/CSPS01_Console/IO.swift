@@ -21,8 +21,34 @@ class IO {
     
     return inputStr!
   }
-}
+  
+  static func getPositiveInteger() -> Int {
+    promptInput(with: "\n\nLab 6, Assignment #5\n")
+    let message = "Please enter a positive integer: "
+    
+    promptInput(with: message)
+    var positiveInteger = IO.getInput().integerValue
+    
+    while positiveInteger < 0 {
+      IO.promptInput(with: message)
+      positiveInteger = IO.getInput().integerValue
+    }
+    return positiveInteger
+  }
+  
+  static func getPositiveDouble() -> Double {
+    promptInput(with: "Please enter a positive double: ")
+    var positiveDouble = IO.getInput().doubleValue
+    
+    while positiveDouble < 0.0 {
+      IO.promptInput(with: "Please enter a positive double: ")
+      positiveDouble = IO.getInput().doubleValue
+    }
+    return positiveDouble
+  }
+} // EOC
 
+// Extension(s) ==================================================================
 extension NSString {
   var characterValue: Character {
     get {
