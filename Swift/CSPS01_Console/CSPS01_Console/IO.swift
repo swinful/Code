@@ -5,7 +5,6 @@
 //  Created by Samuel A WINFUL on 10/11/15.
 //  Copyright © 2015 WINFUL Samuel. All rights reserved.
 //
-
 import Foundation
 
 class IO {
@@ -23,7 +22,6 @@ class IO {
   }
   
   static func getPositiveInteger() -> Int {
-    promptInput(with: "\n\nLab 6, Assignment #5\n")
     let message = "Please enter a positive integer: "
     
     promptInput(with: message)
@@ -46,7 +44,7 @@ class IO {
     }
     return positiveDouble
   }
-} // EOC
+} // End-Of-Class
 
 // Extension(s) ==================================================================
 extension NSString {
