@@ -24,8 +24,10 @@ class IO {
 }
 
 extension NSString {
-  func characterValue() -> Character {
-    let ourString = String(self)
-    return ourString[ourString.startIndex]
+  var characterValue: Character {
+    get {
+      let ourString = String(self)
+      return ourString[ourString.startIndex]
+    }
   }
 }
