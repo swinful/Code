@@ -21,6 +21,19 @@ class IO {
     return inputStr!
   }
   
+  static func getPositiveInteger64() -> Int64 {
+    let message = "Please enter a long integer: "
+    
+    promptInput(with: message)
+    var positiveInteger64 = IO.getInput().integerValue64
+    
+    while positiveInteger64 < 0 {
+      IO.promptInput(with: message)
+      positiveInteger64 = IO.getInput().integerValue64
+    }
+    return positiveInteger64
+  }
+  
   static func getPositiveInteger() -> Int {
     let message = "Please enter a positive integer: "
     
@@ -48,6 +61,12 @@ class IO {
 
 // Extension(s) ==================================================================
 extension NSString {
+  var integerValue64: Int64 {
+    get {
+      return Int64(self.integerValue)
+    }
+  }
+  
   var characterValue: Character {
     get {
       let ourString = String(self)

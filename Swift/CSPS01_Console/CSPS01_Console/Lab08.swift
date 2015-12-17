@@ -58,6 +58,7 @@ class Lab08 {
   }
   
   func problemOne() {
+    IO.promptInput(with: "\n\nLab 8, Assignment #1\n")
     returnTwoCharacters()
   }
   
@@ -73,6 +74,7 @@ class Lab08 {
   }
   
   func problemTwo() {
+    IO.promptInput(with: "\n\nLab 8, Assignment #2\n")
     var first  = 0
     var second = 0
     getTwoPositives(&first, second: &second)
@@ -81,10 +83,39 @@ class Lab08 {
     print("Square of second integer, \(second), is \(square(second))")
   }
   
-  func run() {
-    // problemOne()
-    problemTwo()
+  // MARK: Problem Three
+  func reorderThree(inout first: Int64, inout second: Int64, inout third: Int64) {
     
+    for _ in 1...3 {
+      if first > second {
+        swap(&first, &second)
+        if second > third {
+          swap(&second, &third)
+        }
+      }
+      
+      if third < second {
+        swap(&third, &second)
+      }
+    }
+  }
+  
+  func problemThree() {
+    IO.promptInput(with: "\n\nLab 8, Assignment #3\n")
+    var longInt1: Int64 = IO.getPositiveInteger64()
+    var longInt2: Int64 = IO.getPositiveInteger64()
+    var longInt3: Int64 = IO.getPositiveInteger64()
+    
+    reorderThree(&longInt1, second: &longInt2, third: &longInt3)
+    
+    print("In order: \(longInt1) \(longInt2) \(longInt3)")
+    
+  }
+  
+  func run() {
+    problemOne()
+    problemTwo()
+    problemThree()
   }
 }
 
