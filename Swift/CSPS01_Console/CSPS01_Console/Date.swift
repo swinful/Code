@@ -5,6 +5,9 @@
 //  Created by Samuel A WINFUL on 12/17/15.
 //  Copyright © 2015 WINFUL Samuel. All rights reserved.
 //
+// This class was rewritten from:
+//   URL: http://elvis.rowan.edu/~kay/classes/old/csps01/code/date_code.cpp
+//
 // This class will represent any date after Jan 1, 1753. 1752 was a difficult year when
 // they skipped 11 days to make up for the leap year problem.
 //
