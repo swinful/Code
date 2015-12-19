@@ -14,7 +14,7 @@ import Foundation
 
 class Date {
 
-  // MARK: Member Variables -- Private
+  // MARK: Member Properties -- Private
   private var dYear:  Int
   private var dMonth: Int
   private var dDay:   Int
@@ -34,11 +34,10 @@ class Date {
   }
   
   /**
-   * read
-   *
    * read prompts the user to enter the month, day, and year and enters it
    * into the value of "this". If they enter invalid data, they are 
    * repeatedly asked to re-enter until they enter legal values.
+   *
    **/
   func read() {
     
@@ -46,19 +45,18 @@ class Date {
     var month = 0
     var day   = 0
     
-    
     repeat {
       IO.promptInput(with: "Enter a year 1753 or later: ")
-      year = IO.getPositiveInteger()
+      year = IO.getInput().integerValue
       
       IO.promptInput(with: "Enter month (1-12): ")
-      month = IO.getPositiveInteger()
+      month = IO.getInput().integerValue
       
       IO.promptInput(with: "Enter day (1-31): ")
-      day = IO.getPositiveInteger()
+      day = IO.getInput().integerValue
       
-      if !isLegalDate(month: dMonth, day: dDay, year: dYear) {
-        Swift.print("\nILLEGAL DATE!!!\nPlease try again")
+      if !isLegalDate(month: month, day: day, year: year) {
+        Swift.print("\nILLEGAL DATE!!!\nPlease try again\n")
       }
     } while !isLegalDate(month: month, day: day, year: year)
     
