@@ -31,12 +31,46 @@ class Lab09 {
     
   }
   
+  // MARK: Problem Two
+  func problemTwo() {
+    var dOne   = Date()
+    var dTwo   = Date()
+    var dThree = Date()
+    
+    
+    print("Date One")
+    dOne.read()
+    
+    print("Date Two")
+    dTwo.read()
+    
+    print("Date Three")
+    dThree.read()
+    
+    // Sort our three dates
+    for _ in 1...3 {
+      if dTwo.happensBefore(dOne) {
+        swap(&dTwo, &dOne)
+        if dThree.happensBefore(dTwo) {
+          swap(&dThree, &dTwo)
+        }
+      }
+      if dThree.happensBefore(dOne) {
+        swap(&dThree, &dOne)
+      }
+    }
+    
+    print("Below are the dates in ascending order:")
+    dOne.print()
+    dTwo.print()
+    dThree.print()
+  }
   
   
   // MARK: Main
   func run() {
-    
-    problemOne()
+    // problemOne()
+    problemTwo()
     
   }
   

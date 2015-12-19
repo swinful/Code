@@ -26,14 +26,21 @@ class Date {
   // MARK: Member Functions -- Public
   
   /**
-   * init
-   *
    * init "default constructor" - creates a new date object with date July 4, 1776
    **/
   init() {
     dMonth = 7
     dDay   = 4
     dYear  = 1776
+  }
+  
+  /**
+   * init "default constructor" - creates a new date from supplied arguments
+   **/
+  init(year: Int, month: Int, day: Int) {
+    dYear  = year
+    dMonth = month
+    dDay   = day
   }
   
   /**
@@ -67,8 +74,6 @@ class Date {
   }
   
   /**
-   * print
-   *
    * print prints out "this's" month, day, and year in a fancy format
    * for example January 3, 1999 would be printed as 1/3/1999
    **/
@@ -77,8 +82,6 @@ class Date {
   }
   
   /**
-   * addDays
-   *
    * add_days adds num days to "this", changing "this", if num is not
    * positive, "this" will not be changed.
    **/
@@ -90,10 +93,10 @@ class Date {
   }
   
   /**
-   * happensBefore
-   *
-   * happensBefore returns true if "this" date is earlier than 
+   * happensBefore returns true if "this" date is earlier than
    * other_date (and false if "this" date is not earlier)
+   *
+   * * Test
    **/
   func happensBefore(otherDate: Date) -> Bool {
     
@@ -105,8 +108,6 @@ class Date {
   
   
   /**
-   * differenceBetweenDates
-   *
    * differenceBetweenDates returns the number of dates between "this"
    * and other_date. E.g., if this is Jan 25, 2000  and other_date is 
    * Jan 10, 2000 differenceBetweenDates would return 15 
@@ -122,8 +123,6 @@ class Date {
   
   // MARK: Member Functions -- Private
   /**
-   * isLeapYear
-   *
    * isLeapYear returns true iff year is a leap year
    **/
   private func isLeapYear(year: Int) -> Bool {
@@ -140,9 +139,7 @@ class Date {
   }
   
   /**
-   * setDate
-   *
-   * set_date converts month,day, year into days since 1753 format and 
+   * setDate converts month,day, year into days since 1753 format and
    * inserts the appropriate value in "this". If month,day,year are
    * illegal "this" is not changed 
    **/
@@ -156,9 +153,7 @@ class Date {
   }
   
   /**
-   * isLegalDate
-   *
-   * returns true if a date is a legitimate date after 1/1/1753
+   * isLegalDate returns true if a date is a legitimate date after 1/1/1753
    **/
   private func isLegalDate(month month: Int, day: Int, year: Int) -> Bool {
     
@@ -180,9 +175,7 @@ class Date {
   }
   
   /**
-   * daysInMonth
-   *
-   * returns the number of days in the given month/year (year needed for Feb) 
+   * daysInMonth returns the number of days in the given month/year (year needed for Feb)
    **/
   private func daysInMonth(month month: Int, year: Int) -> Int {
     switch month {
@@ -203,9 +196,7 @@ class Date {
   }
   
   /**
-   * addOneDay
-   *
-   * adds one day to "this" date
+   * addOneDay adds one day to "this" date
    **/
   private func addOneDay() {
     ++dDay
@@ -223,10 +214,10 @@ class Date {
   
   
   /** 
-   * daysAfter1_1_1753
    *
-   * returns an int that represents the number of days past 1/1/1753 that 
-   * "this" date is 
+   *
+   * daysAfter1_1_1753 returns an int that represents the number of days 
+   * past 1/1/1753 that "this" date is
    **/
   private func daysAfter1_1_1753() -> Int {
     var total = 0
