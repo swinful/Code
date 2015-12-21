@@ -34,10 +34,9 @@ class IO {
     return positiveInteger64
   }
   
-  static func getPositiveInteger() -> Int {
-    let message = "Please enter a positive integer: "
+  static func getPositiveInteger(message: String = "Please enter a positive integer: ") -> Int {
     
-    promptInput(with: message)
+    IO.promptInput(with: message)
     var positiveInteger = IO.getInput().integerValue
     
     while positiveInteger < 0 {
