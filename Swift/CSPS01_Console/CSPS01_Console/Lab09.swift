@@ -48,6 +48,7 @@ class Lab09 {
     dThree.read()
     
     // Sort our three dates
+    // This is repeat code from Lab08. Consider refactoring
     for _ in 1...3 {
       if dTwo.happensBefore(dOne) {
         swap(&dTwo, &dOne)

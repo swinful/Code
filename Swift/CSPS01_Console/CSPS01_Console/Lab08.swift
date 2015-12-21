@@ -86,6 +86,7 @@ class Lab08 {
   // MARK: Problem Three
   func reorderThree(inout first: Int64, inout second: Int64, inout third: Int64) {
     
+    // 
     for _ in 1...3 {
       if first > second {
         swap(&first, &second)
