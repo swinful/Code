@@ -68,10 +68,23 @@ class Lab09 {
   }
   
   
+  // MARK: Problem Three
+  func problemThree() {
+    let ourRectangle = Rectangle()
+    ourRectangle.read()
+    ourRectangle.print()
+    
+    let area      = ourRectangle.area()
+    let perimeter = ourRectangle.perimeter()
+    
+    print("Area = \(area), Perimeter = \(perimeter)\n")
+  }
+  
   // MARK: Main
   func run() {
     // problemOne()
-    problemTwo()
+    // problemTwo()
+    problemThree()
     
   }
   

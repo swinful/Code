@@ -25,11 +25,8 @@ class Rectangle {
   /// them to reenter the data if they are not positive the resulting rectangle is
   /// stored in "this"
   func read() {
-    IO.promptInput(with: "Enter height: ")
-    rectHeight = IO.getPositiveInteger()
-    
-    IO.promptInput(with: "Enter width: ")
-    rectWidth = IO.getPositiveInteger()
+    rectHeight = IO.getPositiveInteger("Enter height: ")
+    rectWidth  = IO.getPositiveInteger("Enter width: ")
   }
 
   /// print will print a picture using the '*' char
@@ -37,12 +34,11 @@ class Rectangle {
   /// below it
   func print() {
     
-    Swift.print("")
-    
     for (var row = 0; row < rectHeight; row++) {
       for (var col = 0; col < rectWidth; col++) {
-        Swift.print("*")
+        Swift.print("*", separator: "", terminator: "")
       }
+      Swift.print("")
     }
     Swift.print("")
   }
