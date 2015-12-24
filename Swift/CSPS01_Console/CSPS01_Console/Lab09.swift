@@ -67,11 +67,16 @@ class Lab09 {
   }
   
   
+  // MARK: Problem Three
+  func problemThree() {
+    
+  }
+  
   // MARK: Main
   func run() {
     // problemOne()
-    problemTwo()
-    
+    // problemTwo()
+    problemThree()
   }
   
 }
