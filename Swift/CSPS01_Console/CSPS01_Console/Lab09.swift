@@ -80,11 +80,35 @@ class Lab09 {
     print("Area = \(area), Perimeter = \(perimeter)\n")
   }
   
+  // MARK: Problem Four
+  func problemFour() {
+    let r1 = Rectangle()
+    let r2 = Rectangle()
+    
+    print("1st Rectangle")
+    r1.read()
+    
+    print("2nd Rectangle")
+    r2.read()
+    
+    if r1.biggerArea(r2) {
+      print("1st Rectangle is bigger")
+      r1.print()
+    }
+    
+    if r2.biggerArea(r1) {
+      print("2nd Rectangle is bigger")
+      r2.print()
+    }
+    
+  }
+  
   // MARK: Main
   func run() {
     // problemOne()
     // problemTwo()
-    problemThree()
+    // problemThree()
+    // problemFour()
   }
   
 }
