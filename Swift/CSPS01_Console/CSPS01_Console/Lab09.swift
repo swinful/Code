@@ -100,7 +100,19 @@ class Lab09 {
       print("2nd Rectangle is bigger")
       r2.print()
     }
+  }
+  
+  // MARK: Problem Five
+  func problemFive() {
+    let baseInt = IO.getPositiveInteger()
+    let rectangle = Rectangle()
     
+    for i in 1...baseInt {
+      rectangle.setHeight(i)
+      rectangle.setWidth(i)
+      rectangle.print()
+    }
+    print("")
   }
   
   // MARK: Main
@@ -109,6 +121,7 @@ class Lab09 {
     // problemTwo()
     // problemThree()
     // problemFour()
+    problemFive()
   }
   
 }
