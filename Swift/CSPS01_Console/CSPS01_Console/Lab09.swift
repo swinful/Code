@@ -12,6 +12,7 @@ class Lab09 {
   
   // MARK: Problem One
   func problemOne() {
+    IO.promptInput(with: "\n\nLab 9, Assignment #1\n")
     
     let dOne = Date()
     let dTwo = Date()
@@ -33,6 +34,7 @@ class Lab09 {
   
   // MARK: Problem Two
   func problemTwo() {
+    IO.promptInput(with: "\n\nLab 9, Assignment #2\n")
     var dOne   = Date()
     var dTwo   = Date()
     var dThree = Date()
@@ -70,6 +72,7 @@ class Lab09 {
   
   // MARK: Problem Three
   func problemThree() {
+    IO.promptInput(with: "\n\nLab 9, Assignment #3\n")
     let ourRectangle = Rectangle()
     ourRectangle.read()
     ourRectangle.print()
@@ -82,6 +85,7 @@ class Lab09 {
   
   // MARK: Problem Four
   func problemFour() {
+    IO.promptInput(with: "\n\nLab 9, Assignment #4\n")
     let r1 = Rectangle()
     let r2 = Rectangle()
     
@@ -104,6 +108,7 @@ class Lab09 {
   
   // MARK: Problem Five
   func problemFive() {
+    IO.promptInput(with: "\n\nLab 9, Assignment #5\n")
     let baseInt = IO.getPositiveInteger()
     let rectangle = Rectangle()
     
@@ -117,11 +122,10 @@ class Lab09 {
   
   // MARK: Main
   func run() {
-    // problemOne()
-    // problemTwo()
-    // problemThree()
-    // problemFour()
+    problemOne()
+    problemTwo()
+    problemThree()
+    problemFour()
     problemFive()
   }
-  
 }
