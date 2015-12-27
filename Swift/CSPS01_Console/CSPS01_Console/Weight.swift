@@ -20,6 +20,10 @@ class Weight {
     get {
       return 16 * pounds + ounces
     }
+    set {
+      pounds = newValue / 16
+      ounces = newValue % 16
+    }
   }
   
   /// Constructor; MUST initialize the weight to 0 lb. 0 oz.
@@ -55,15 +59,14 @@ class Weight {
   
   /// Sets this weight to the given number of pounds and ounces 
   // (You may assume poundsIn and ouncesIn are nonnegative.)
-  func set(poundsIn: Int, ouncesIn: Int) {
+  func set(poundsIn poundsIn: Int, ouncesIn: Int) {
     pounds = poundsIn
     ounces = ouncesIn
   }
   
   /// Returns true if and only if this weight is heavier than otherWeight
   func heavier(otherWeight: Weight) -> Bool {
-    
-    if self.pounds > otherWeight.pounds && self.ounces > otherWeight.ounces {
+    if self.totalOunces > otherWeight.totalOunces {
       return true
     } else {
       return false
@@ -77,8 +80,7 @@ class Weight {
   func plus(otherWeight: Weight) -> Weight {
     
     let aNewWeight = Weight()
-    aNewWeight.ounces = self.ounces + otherWeight.ounces
-    aNewWeight.pounds = self.pounds + otherWeight.pounds
+    aNewWeight.totalOunces = self.totalOunces + otherWeight.totalOunces
     
     return aNewWeight
   }
@@ -89,8 +91,8 @@ class Weight {
   // This weight is NOT changed.
   func times(factor: Double) -> Weight {
     let aNewWeight = self
-    aNewWeight.pounds *= 2
-    aNewWeight.ounces *= 2
+    aNewWeight.pounds = Int(Double(aNewWeight.pounds) * factor)
+    aNewWeight.ounces = Int(Double(aNewWeight.ounces) * factor)
     
     return aNewWeight
   }
