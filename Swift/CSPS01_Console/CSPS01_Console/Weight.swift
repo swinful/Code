@@ -14,6 +14,14 @@ class Weight {
   private var pounds: Int
   private var ounces: Int
   
+  
+  /// read-only property.
+  private var totalOunces: Int {
+    get {
+      return 16 * pounds + ounces
+    }
+  }
+  
   /// Constructor; MUST initialize the weight to 0 lb. 0 oz.
   init() {
     pounds = 0
