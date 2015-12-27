@@ -44,10 +44,10 @@ class Lab08 {
    **/
   func returnTwoCharacters() {
   
-    IO.promptInput(with: "Please enter first character: ")
+    IO.print(with: "Please enter first character: ")
     var char1 = IO.getInput().characterValue
     
-    IO.promptInput(with: "Please enter second character: ")
+    IO.print(with: "Please enter second character: ")
     var char2 = IO.getInput().characterValue
     
     print("The first and second character entered were: \(char1) \(char2)\n")
@@ -58,7 +58,7 @@ class Lab08 {
   }
   
   func problemOne() {
-    IO.promptInput(with: "\n\nLab 8, Assignment #1\n")
+    IO.print(with: "\n\nLab 8, Assignment #1\n")
     returnTwoCharacters()
   }
   
@@ -74,7 +74,7 @@ class Lab08 {
   }
   
   func problemTwo() {
-    IO.promptInput(with: "\n\nLab 8, Assignment #2\n")
+    IO.print(with: "\n\nLab 8, Assignment #2\n")
     var first  = 0
     var second = 0
     getTwoPositives(&first, second: &second)
@@ -102,7 +102,7 @@ class Lab08 {
   }
   
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 8, Assignment #3\n")
+    IO.print(with: "\n\nLab 8, Assignment #3\n")
     var longInt1: Int64 = IO.getPositiveInteger64()
     var longInt2: Int64 = IO.getPositiveInteger64()
     var longInt3: Int64 = IO.getPositiveInteger64()

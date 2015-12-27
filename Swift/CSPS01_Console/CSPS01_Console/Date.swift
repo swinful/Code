@@ -56,13 +56,13 @@ class Date {
     var day   = 0
     
     repeat {
-      IO.promptInput(with: "Enter a year 1753 or later: ")
+      IO.print(with: "Enter a year 1753 or later: ")
       year = IO.getInput().integerValue
       
-      IO.promptInput(with: "Enter month (1-12): ")
+      IO.print(with: "Enter month (1-12): ")
       month = IO.getInput().integerValue
       
-      IO.promptInput(with: "Enter day (1-31): ")
+      IO.print(with: "Enter day (1-31): ")
       day = IO.getInput().integerValue
       
       if !isLegalDate(month: month, day: day, year: year) {

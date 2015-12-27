@@ -56,8 +56,8 @@ class Lab06 {
 
   // MARK: Problem One
   func problemOne() {
-    IO.promptInput(with: "\n\nLab 6, Assignment #1\n")
-    IO.promptInput(with: "Please enter a word beginning and ending with a *: ")
+    IO.print(with: "\n\nLab 6, Assignment #1\n")
+    IO.print(with: "Please enter a word beginning and ending with a *: ")
     let stringValue = String(IO.getInput()).uppercaseString
     print("\(stringValue)")
   }
@@ -78,20 +78,20 @@ class Lab06 {
   }
 
   func problemTwo() {
-    IO.promptInput(with: "\n\nLab 6, Assignment #2\n")
-    IO.promptInput(with: "Please enter a word beginning and ending with a *: ")
+    IO.print(with: "\n\nLab 6, Assignment #2\n")
+    IO.print(with: "Please enter a word beginning and ending with a *: ")
     let stringValue = String(IO.getInput())
     for character in stringValue.characters {
-      IO.promptInput(with: "\(toggleCase(character))")
+      IO.print(with: "\(toggleCase(character))")
     }
   }
 
   // MARK: Problem Three
   func getOddInt() -> Int {
-    IO.promptInput(with: "Please enter an odd integer: ")
+    IO.print(with: "Please enter an odd integer: ")
     var anInt = IO.getInput().integerValue
     while(anInt % 2 == 0) {
-      IO.promptInput(with: "\(anInt) is not odd, please try again: ")
+      IO.print(with: "\(anInt) is not odd, please try again: ")
       anInt = IO.getInput().integerValue
     }
     
@@ -108,14 +108,14 @@ class Lab06 {
     }
     
     while start <= end {
-      IO.promptInput(with: "\(start) ")
+      IO.print(with: "\(start) ")
       start+=2
     }
     print("")
   }
 
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 6, Assignment #3\n")
+    IO.print(with: "\n\nLab 6, Assignment #3\n")
     printByTwos(getOddInt(), larger: getOddInt())
   }
   
@@ -130,7 +130,7 @@ class Lab06 {
   }
   
   func problemFour() {
-    IO.promptInput(with: "\n\nLab 6, Assignment #4\n")
+    IO.print(with: "\n\nLab 6, Assignment #4\n")
     var smallest = IO.getPositiveDouble()
     
     for _ in 1...3 {
@@ -145,7 +145,7 @@ class Lab06 {
   // MARK: Problem Five
   func getSymbolCharacter() -> Character {
     let message = "Please enter a symbol: "
-    IO.promptInput(with: message)
+    IO.print(with: message)
     let symbolString = String(IO.getInput())
     let symbol = symbolString[symbolString.startIndex]
     return symbol
@@ -153,7 +153,7 @@ class Lab06 {
   
   func drawLine(repeats: Int, symbol: Character) {
     for _ in 0..<repeats {
-      IO.promptInput(with: "\(symbol)")
+      IO.print(with: "\(symbol)")
     }
     print("")
   }

@@ -53,7 +53,7 @@ class Weight {
   /// (X is the number of pounds, Y is the number of ounces.)
   ///  (For example, 5 lb. 2 oz. or 0 lb. 13 oz.)
   func print() {
-    IO.promptInput(with: "\(pounds) lb. \(ounces) oz.")
+    IO.print(with: "\(pounds) lb. \(ounces) oz.")
   }
   
   

@@ -37,7 +37,7 @@ class Lab04 {
   // MARK: Common Member Function Variables
   func askForPositiveIntegerWithCharacter() -> (Int, Character) {
    let ourInteger = askForPositiveInteger()
-    IO.promptInput(with: "Enter a single character: ")
+    IO.print(with: "Enter a single character: ")
     let ourCharString = IO.getInput() as String
     let ourChar = ourCharString[ourCharString.startIndex]
     
@@ -45,10 +45,10 @@ class Lab04 {
   }
   
   func askForPositiveInteger() -> Int {
-    IO.promptInput(with: "Enter a Positive Integer: ")
+    IO.print(with: "Enter a Positive Integer: ")
     positiveInteger = IO.getInput().integerValue
     while positiveInteger < 1 {
-      IO.promptInput(with: "Enter Positive Integer: ")
+      IO.print(with: "Enter Positive Integer: ")
       positiveInteger = IO.getInput().integerValue
     }
     return positiveInteger
@@ -66,14 +66,14 @@ class Lab04 {
   }
   
   func problemTwo() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #2\n")
-    IO.promptInput(with: "Enter number: ")
+    IO.print(with: "\n\nLab 4, Assignment #2\n")
+    IO.print(with: "Enter number: ")
     
     var numberEntered = IO.getInput().doubleValue
     var count = 0
     
     while !isNumberEven(numberEntered) {
-      IO.promptInput(with: "Enter number: ")
+      IO.print(with: "Enter number: ")
       numberEntered = IO.getInput().doubleValue
       ++count
     }
@@ -82,36 +82,36 @@ class Lab04 {
   
   // MARK: Problem Three
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #3\n")
-    IO.promptInput(with: "Please enter integers to total, ending with 0: ")
+    IO.print(with: "\n\nLab 4, Assignment #3\n")
+    IO.print(with: "Please enter integers to total, ending with 0: ")
     var enteredInt = IO.getInput().integerValue
     var sum = 0
     while (enteredInt != 0) {
       sum += enteredInt
       print("Added: \(enteredInt); total = \(sum)")
-      IO.promptInput(with: "Enter an integer: ")
+      IO.print(with: "Enter an integer: ")
       enteredInt = IO.getInput().integerValue
     }
   }
   
   // MARK: Problem Four
   func problemFour() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #4\n")
+    IO.print(with: "\n\nLab 4, Assignment #4\n")
     positiveInteger = askForPositiveInteger()
     for _ in 1...positiveInteger {
-      IO.promptInput(with: "1")
+      IO.print(with: "1")
     }
     print("")
   }
   
   // MARK: Problem Five
   func problemFive() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #5\n")
+    IO.print(with: "\n\nLab 4, Assignment #5\n")
     positiveInteger = askForPositiveInteger()
     
     if positiveInteger > 0 {
       for i in 1...positiveInteger {
-        IO.promptInput(with: "\(i)")
+        IO.print(with: "\(i)")
       }
     }
     print("\n")
@@ -119,20 +119,20 @@ class Lab04 {
   
   // MARK: Problem Six
   func problemSix() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #6\n")
+    IO.print(with: "\n\nLab 4, Assignment #6\n")
     var character: Character
     (positiveInteger, character) = askForPositiveIntegerWithCharacter()
     
     for _ in 1...positiveInteger {
-      IO.promptInput(with: "\(character)")
+      IO.print(with: "\(character)")
     }
     print("")
   }
   
   // MARK: Problem Seven
   func problemSeven() {
-    IO.promptInput(with: "\n\nLab 4, Assignment #7\n")
-    IO.promptInput(with: "Please enter a sentence terminated by a period: ")
+    IO.print(with: "\n\nLab 4, Assignment #7\n")
+    IO.print(with: "Please enter a sentence terminated by a period: ")
     let string = IO.getInput() as String
     var vowelCount = 0
     

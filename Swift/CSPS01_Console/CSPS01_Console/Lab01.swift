@@ -26,7 +26,7 @@ class Lab01 {
   }
   
   private func setYearOfBirth() {
-    IO.promptInput(with: "Please enter the year of your birth: ")
+    IO.print(with: "Please enter the year of your birth: ")
     yearOfBirth = IO.getInput().integerValue
   }
   

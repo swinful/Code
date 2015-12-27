@@ -20,7 +20,7 @@ class Lab03 {
   
   // MARK: Problem One
   func promptForInches() {
-    IO.promptInput(with: "Please enter the length of your object in inches: ")
+    IO.print(with: "Please enter the length of your object in inches: ")
     inches = IO.getInput().integerValue
   }
   
@@ -33,11 +33,11 @@ class Lab03 {
   }
   
   func displayFeetAndInches() {
-    IO.promptInput(with: "A \(inches) inch long object is \(feetAndInches.0) feet \(feetAndInches.1) inches.\n")
+    IO.print(with: "A \(inches) inch long object is \(feetAndInches.0) feet \(feetAndInches.1) inches.\n")
   }
   
   func problemOne() {
-    IO.promptInput(with: "Lab 3: Assignment 1\n\n")
+    IO.print(with: "Lab 3: Assignment 1\n\n")
     promptForInches()
     calculateFeetAndInches(inches)
     displayFeetAndInches()
@@ -46,38 +46,38 @@ class Lab03 {
   
   // MARK: Problem Two
   func collectAndPerformFacts() {
-    IO.promptInput(with: "Account number: ")
+    IO.print(with: "Account number: ")
     accountNumber = IO.getInput().integerValue
     
-    IO.promptInput(with: "Account balance: ")
+    IO.print(with: "Account balance: ")
     balance = IO.getInput().doubleValue
     
-    IO.promptInput(with: "Account total charges: ")
+    IO.print(with: "Account total charges: ")
     totalCharges = IO.getInput().doubleValue
     
-    IO.promptInput(with: "Account total payments: ")
+    IO.print(with: "Account total payments: ")
     totalPayments = IO.getInput().doubleValue
     
-    IO.promptInput(with: "Allowed credit limit: ")
+    IO.print(with: "Allowed credit limit: ")
     allowedLimit = IO.getInput().doubleValue
     
     let newBalance = balance + totalCharges - totalPayments
     
     if newBalance > allowedLimit {
-      IO.promptInput(with: "Account number: \(accountNumber)\nCredit limit: \(allowedLimit)\n New balance: \(newBalance)\n")
-      IO.promptInput(with: "Credit Limit Exceeded!")
+      IO.print(with: "Account number: \(accountNumber)\nCredit limit: \(allowedLimit)\n New balance: \(newBalance)\n")
+      IO.print(with: "Credit Limit Exceeded!")
     }
     
   }
   
   func problemTwo() {
-    IO.promptInput(with: "\n\nLab 3: Assignment 2\n")
+    IO.print(with: "\n\nLab 3: Assignment 2\n")
     collectAndPerformFacts()
   }
   
   // MARK: Problem Three
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 3: Assignment 3\n")
+    IO.print(with: "\n\nLab 3: Assignment 3\n")
     if "A" > "b"  {
       print("Lower case letters are bigger than upper case letters")
     } else {
@@ -132,7 +132,7 @@ class Lab03 {
   }
   
   func collectWholeCentsAndPrintBills() {
-    IO.promptInput(with: "Enter whole number of cents: ")
+    IO.print(with: "Enter whole number of cents: ")
     totalPennies = IO.getInput().integerValue
     let tens     = numberOfDollars(from: Bill.Ten)
     let fives    = numberOfDollars(from: Bill.Five)
@@ -152,7 +152,7 @@ class Lab03 {
   }
   
   func problemFour() {
-    IO.promptInput(with: "\n\nLab 3: Assignment 4\n")
+    IO.print(with: "\n\nLab 3: Assignment 4\n")
     collectWholeCentsAndPrintBills()
   }
   

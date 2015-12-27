@@ -16,7 +16,7 @@ class Lab10 {
     let b = Weight()
     let c = Weight()
     
-    IO.promptInput(with: "An uninitialized Weight variable is ")
+    IO.print(with: "An uninitialized Weight variable is ")
     a.print()
     print("\n")
     
@@ -27,10 +27,10 @@ class Lab10 {
     b.read()
     
     print("")
-    IO.promptInput(with: "You entered ")
+    IO.print(with: "You entered ")
     a.print()
     
-    IO.promptInput(with: " and ")
+    IO.print(with: " and ")
     b.print()
     print("")
     
@@ -42,7 +42,7 @@ class Lab10 {
       print("The two packages are the same weight.\n")
     }
     
-    IO.promptInput(with: "Their average weight is ")
+    IO.print(with: "Their average weight is ")
     
     var x = Weight()
     x = a.plus(b)
@@ -55,9 +55,9 @@ class Lab10 {
     print("")
     
     c.set(poundsIn: 5, ouncesIn: 0)
-    IO.promptInput(with: "The average weight of those two packages TOGETHER WITH a package weighing ")
+    IO.print(with: "The average weight of those two packages TOGETHER WITH a package weighing ")
     c.print()
-    IO.promptInput(with: " is ")
+    IO.print(with: " is ")
     
     x = a.plus(b)
     x = x.plus(c)

@@ -43,7 +43,7 @@ class Lab02 {
   
   private func promptForEven() {
     print("Lab 02: #6 -----------------------------------------")
-    IO.promptInput(with: "Please enter an even number integer: ")
+    IO.print(with: "Please enter an even number integer: ")
     if (IO.getInput().integerValue % 2 == 0) {
       print("Thank you.")
     } else {
@@ -53,7 +53,7 @@ class Lab02 {
   }
   
   private func getWeightOfCereal() {
-    IO.promptInput(with: "Please enter the weight of the cereal in ounces: ")
+    IO.print(with: "Please enter the weight of the cereal in ounces: ")
     cerealInOunces = IO.getInput().doubleValue
   }
   
@@ -67,7 +67,7 @@ class Lab02 {
   
   private func getInts(howMany: Int) {
     for (var i = 0; i < howMany; ++i) {
-      IO.promptInput(with: "Enter an integer: ")
+      IO.print(with: "Enter an integer: ")
       ourInts.append(IO.getInput().integerValue)
     }
   }
@@ -98,9 +98,9 @@ class Lab02 {
     print("\nLab 02: #7 -----------------------------------------")
     var arrayOfInts = [Int]()
     
-    IO.promptInput(with: "Please enter three positive integers below.\n")
+    IO.print(with: "Please enter three positive integers below.\n")
     for i in 1...3 {
-      IO.promptInput(with: "Integer #\(i): ")
+      IO.print(with: "Integer #\(i): ")
       let enteredInt = IO.getInput().integerValue
       if isNegative(enteredInt) {
         print("Negative integers are not allowed.")
@@ -112,7 +112,7 @@ class Lab02 {
     
     print("Here are the sorted integers: ")
     for i in arrayOfInts.sort() {
-      IO.promptInput(with: "\(i) ")
+      IO.print(with: "\(i) ")
     }
     print("\n----------------------------------------------------")
   }

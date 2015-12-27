@@ -13,7 +13,7 @@ class Lab07 {
   // MARK: ProblemThree
   func tupleOfThreeInts() -> (Int, Int, Int) {
     let message = "Please enter the time as three integers (w/ spaces): "
-    IO.promptInput(with: message)
+    IO.print(with: message)
     let stringOfThree = String(IO.getInput()).componentsSeparatedByString(" ")
     
     var intArray = [Int]()
@@ -25,13 +25,13 @@ class Lab07 {
       switch count {
       case 0: // check for valid hours
         while intArray[count] > 12 || intArray[count] < 1 {
-          IO.promptInput(with: "\(intArray[count]) is not between 1 and 12, please reenter: ")
+          IO.print(with: "\(intArray[count]) is not between 1 and 12, please reenter: ")
           intArray[count] = IO.getInput().integerValue
         }
         
       case 1, 2: // check for valid minutes
         while intArray[count] > 59 || intArray[count] < 0 {
-          IO.promptInput(with: "\(intArray[count]) is not between 0 and 59, please reenter: ")
+          IO.print(with: "\(intArray[count]) is not between 0 and 59, please reenter: ")
           intArray[count] = IO.getInput().integerValue
         }
         
@@ -46,11 +46,11 @@ class Lab07 {
   func secondsPastMidNight(hours hours: Int, minutes: Int, seconds: Int) {
     let totalSeconds = ((12-hours)*60*60) + (minutes*60) + (seconds)
     let timeString = "\(hours):\(minutes):\(seconds) is \(totalSeconds) seconds past midnight.\n"
-    IO.promptInput(with: timeString)
+    IO.print(with: timeString)
   }
   
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 7, Assignment #3\n")
+    IO.print(with: "\n\nLab 7, Assignment #3\n")
     let (hours, minutes, seconds) = tupleOfThreeInts()
     secondsPastMidNight(hours: hours, minutes: minutes, seconds: seconds)
   }
@@ -70,17 +70,17 @@ class Lab07 {
   }
   
   func problemFour() {
-    IO.promptInput(with: "\n\nLab 7, Assignment #4\n")
-    IO.promptInput(with: "Please enter starting number: ")
+    IO.print(with: "\n\nLab 7, Assignment #4\n")
+    IO.print(with: "Please enter starting number: ")
     var startNumber = IO.getInput().integerValue
     
-    IO.promptInput(with: "Please enter number of hailstones: ")
+    IO.print(with: "Please enter number of hailstones: ")
     let numberOfHailstones = IO.getInput().integerValue
     
-    IO.promptInput(with: "\(numberOfHailstones) hailstones starting at \(startNumber) are: ")
+    IO.print(with: "\(numberOfHailstones) hailstones starting at \(startNumber) are: ")
     for _ in 0..<numberOfHailstones {
       startNumber = hailstones(startNumber)
-      IO.promptInput(with: "\(startNumber) ")
+      IO.print(with: "\(startNumber) ")
     }
     print("")
   }
@@ -98,8 +98,8 @@ class Lab07 {
   }
   
   func problemFive() {
-    IO.promptInput(with: "\n\nLab 7, Assignment #5\n")
-    IO.promptInput(with: "Please enter a year: ")
+    IO.print(with: "\n\nLab 7, Assignment #5\n")
+    IO.print(with: "Please enter a year: ")
     let year = IO.getInput().integerValue
     if isLeapYear(year) {
       print("\(year) is a leap year.")

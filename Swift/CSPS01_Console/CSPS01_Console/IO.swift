@@ -9,8 +9,8 @@ import Foundation
 
 class IO {
   
- static func promptInput (with message: String) {
-    print(message, terminator: "")
+ static func print (with message: String) {
+    Swift.print(message, terminator: "")
   }
   
   static func getInput() -> NSString {
@@ -24,11 +24,11 @@ class IO {
   static func getPositiveInteger64() -> Int64 {
     let message = "Please enter a long integer: "
     
-    promptInput(with: message)
+    print(with: message)
     var positiveInteger64 = IO.getInput().integerValue64
     
     while positiveInteger64 < 0 {
-      IO.promptInput(with: message)
+      print(with: message)
       positiveInteger64 = IO.getInput().integerValue64
     }
     return positiveInteger64
@@ -36,22 +36,22 @@ class IO {
   
   static func getPositiveInteger(message: String = "Please enter a positive integer: ") -> Int {
     
-    IO.promptInput(with: message)
+    print(with: message)
     var positiveInteger = IO.getInput().integerValue
     
     while positiveInteger < 0 {
-      IO.promptInput(with: message)
+      print(with: message)
       positiveInteger = IO.getInput().integerValue
     }
     return positiveInteger
   }
   
   static func getPositiveDouble() -> Double {
-    promptInput(with: "Please enter a positive double: ")
+    print(with: "Please enter a positive double: ")
     var positiveDouble = IO.getInput().doubleValue
     
     while positiveDouble < 0.0 {
-      IO.promptInput(with: "Please enter a positive double: ")
+      print(with: "Please enter a positive double: ")
       positiveDouble = IO.getInput().doubleValue
     }
     return positiveDouble

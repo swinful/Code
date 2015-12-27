@@ -88,12 +88,12 @@ class Lab05 {
   
   // MARK: Problem One
   func problemOne() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #1\n")
-    IO.promptInput(with: "Please enter a character: ")
+    IO.print(with: "\n\nLab 5, Assignment #1\n")
+    IO.print(with: "Please enter a character: ")
     let response = String(IO.getInput())
     let character = response[response.startIndex]
     for _ in 0..<5 {
-      IO.promptInput(with: "\(character)")
+      IO.print(with: "\(character)")
     }
     print("")
     
@@ -101,13 +101,13 @@ class Lab05 {
   
   // MARK: Problem Two
   func problemTwo() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #2\n")
-    IO.promptInput(with: "Please enter a character: ")
+    IO.print(with: "\n\nLab 5, Assignment #2\n")
+    IO.print(with: "Please enter a character: ")
     let response = String(IO.getInput())
     let character = response[response.startIndex]
     for _ in 0..<3 {
       for _ in 0..<5 {
-        IO.promptInput(with: "\(character)")
+        IO.print(with: "\(character)")
       }
       print("")
     }
@@ -115,20 +115,20 @@ class Lab05 {
   
   // MARK: Problem Three
   func problemThree() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #3\n")
-    IO.promptInput(with: "Please enter the number of columns: ")
+    IO.print(with: "\n\nLab 5, Assignment #3\n")
+    IO.print(with: "Please enter the number of columns: ")
     let columns = IO.getInput().integerValue
     
-    IO.promptInput(with: "Please enter the number of rows: ")
+    IO.print(with: "Please enter the number of rows: ")
     let rows = IO.getInput().integerValue
     
-    IO.promptInput(with: "Please enter the character to print: ")
+    IO.print(with: "Please enter the character to print: ")
     let string = String(IO.getInput())
     let character = string[string.startIndex]
     
     for _ in 0..<rows {
       for _ in 0..<columns {
-        IO.promptInput(with: "\(character)")
+        IO.print(with: "\(character)")
       }
       print("")
     }
@@ -137,19 +137,19 @@ class Lab05 {
   
   // MARK: Problem Four
   func problemFour() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #4\n")
+    IO.print(with: "\n\nLab 5, Assignment #4\n")
     for i in 1...5 {
-      IO.promptInput(with: "\(i)")
+      IO.print(with: "\(i)")
     }
     print("")
   }
   
   // MARK: Problem Five
   func problemFive() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #5\n")
+    IO.print(with: "\n\nLab 5, Assignment #5\n")
     for _ in 1...3 {
       for i in 1...5 {
-        IO.promptInput(with: "\(i)")
+        IO.print(with: "\(i)")
       }
       print("")
     }
@@ -157,28 +157,28 @@ class Lab05 {
   
   // MARK: Problem Six
   func problemSix() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #6\n")
-    IO.promptInput(with: "Please enter the number of lines: ")
+    IO.print(with: "\n\nLab 5, Assignment #6\n")
+    IO.print(with: "Please enter the number of lines: ")
     let lines = IO.getInput().integerValue
     for _ in 0..<lines {
       for i in 1...5 {
-        IO.promptInput(with: "\(i)")
+        IO.print(with: "\(i)")
       }
       print("")
     }
   }
   
   func problemSeven() {
-    IO.promptInput(with: "\n\nLab 5, Assignment #7\n")
-    IO.promptInput(with: "Please enter the number of columns: ")
+    IO.print(with: "\n\nLab 5, Assignment #7\n")
+    IO.print(with: "Please enter the number of columns: ")
     let columns = IO.getInput().integerValue
     
-    IO.promptInput(with: "Please enter the number of rows: ")
+    IO.print(with: "Please enter the number of rows: ")
     let rows = IO.getInput().integerValue
     
     for _ in 0..<rows {
       for i in 1...columns {
-        IO.promptInput(with: "\(i)")
+        IO.print(with: "\(i)")
       }
       print("")
     }
