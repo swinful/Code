@@ -10,10 +10,12 @@ import Foundation
 
 class ProjectTeam {
   
+  // MARK: Private Properties
   private var scientiest:       Int
   private var engineer:         Int
   private var productionFactor: Double
   
+  // Mark: Public Methods
   // Default constructor: creates a ProjectTeam with 2 scientists,
   // 1 engineer, and a production factor of 2.5.
   init() {
@@ -30,11 +32,11 @@ class ProjectTeam {
   convenience init(sci: Int, eng: Int, prod: Double) {
     self.init()
     
-    if (Double(scientiest) + Double(engineer) + Double(productionFactor)) > 0 {
+    if sci > 0 && eng > 0 && prod > 0 {
       scientiest       = sci
       engineer         = eng
       productionFactor = prod
-    } else {
+    } else { // below should not be needed and taken care of by self.init()
       scientiest       = 2
       engineer         = 1
       productionFactor = 2.5
@@ -84,7 +86,7 @@ class ProjectTeam {
   // Note that your printout has to match mine *exactly* to get full
   // credit!
   func printStatus() {
-    print("status: \(scientiest) scientists \(engineer) engineers \(productionFactor) production factor")
+    print("status: \(scientiest) scientists, \(engineer) engineers, \(productionFactor) production factor")
   }
   
   // returns the total daily production for this ProjectTeam, which is
@@ -102,7 +104,12 @@ class ProjectTeam {
   // ----- ==  --- == 2.5
   // 4        4
   func computeProjectTeamProduction() -> Double {
-    return Double(scientiest * engineer) / productionFactor
+    let teamProduction = Double(scientiest * engineer) / productionFactor
+    let formatter = NSNumberFormatter()
+    formatter.minimumFractionDigits = 4
+    formatter.maximumFractionDigits = 4
+    let result = formatter.stringFromNumber(teamProduction)
+    return Double(result!)!
   }
   
   
