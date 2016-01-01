@@ -36,10 +36,6 @@ class ProjectTeam {
       scientiest       = sci
       engineer         = eng
       productionFactor = prod
-    } else { // below should not be needed and taken care of by self.init()
-      scientiest       = 2
-      engineer         = 1
-      productionFactor = 2.5
     }
   }
   
@@ -51,7 +47,9 @@ class ProjectTeam {
   if you do the extra credit.
   */
   func addSci(sci: Int) {
-    if sci > 0 {
+    if sci < 0 {
+      scientiest = 1
+    } else {
       scientiest += sci
     }
   }
@@ -63,9 +61,7 @@ class ProjectTeam {
   // things so that you can't have a negative number of engineers
   // if you do the extra credit.
   func addEng(eng: Int) {
-    if eng > 0 {
-      engineer += eng
-    }
+    engineer += eng
   }
   
   // If prod > 0, sets the production factor to prod, otherwise,
@@ -103,13 +99,19 @@ class ProjectTeam {
   // 5 * 2      10
   // ----- ==  --- == 2.5
   // 4        4
-  func computeProjectTeamProduction() -> Double {
-    let teamProduction = Double(scientiest * engineer) / productionFactor
+  func computeDailyProduction() -> Double {
+    
     let formatter = NSNumberFormatter()
-    formatter.minimumFractionDigits = 4
-    formatter.maximumFractionDigits = 4
-    let result = formatter.stringFromNumber(teamProduction)
-    return Double(result!)!
+    
+    formatter.maximumFractionDigits    = 4
+    formatter.minimumSignificantDigits = 1
+    formatter.numberStyle              = .DecimalStyle
+    
+    let dScientist = NSNumber(integer: scientiest).doubleValue
+    let dEngineer  = NSNumber(integer: engineer).doubleValue
+    let production = dScientist * dEngineer / productionFactor
+    
+    return production
   }
   
   
@@ -119,14 +121,14 @@ class ProjectTeam {
   
   // *** Daily report: 2.5 units produced today ***
   
-  // Note, you should use your compute_Project_team_production function
+  // Note, you should use your computeDailyProduction function
   // inside of this function. If you don't, 5 points will be
   // deducted from your score.
   
-  // Note also that your printout has to match mine *exactly* to get full
+  // Note: Also that your printout has to match mine *exactly* to get full
   // credit!
   func printDailyReport() {
-    let factor = computeProjectTeamProduction()
+    let factor = computeDailyProduction()
     print("*** Daily report: \(factor) units produced today ***")
   }
   
@@ -139,17 +141,24 @@ class ProjectTeam {
     let temp = self
     temp.scientiest       += second.scientiest
     temp.engineer         += second.engineer
-    temp.productionFactor += second.productionFactor + 1 // ??
+    
+    // The sample run displays a production factor having the greatest of
+    // either this or second as appose to "this and secons". I will follow
+    // the sample output instead of the requirement here since they conflict.
+    if second.productionFactor >= self.productionFactor {
+      temp.productionFactor = second.productionFactor
+    }
     
     return temp
   }
   
-  // ---------------------- transfer_personnel -----------------------
-  /* YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
-  */
+  // ---------------------- transferPersonnel -----------------------
+  /**
+   * YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
+   * YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
+   **/
+  // Let's try and transfer 75 sci from gamma to alpha
+  func transferPersonnel(team: ProjectTeam, sci: Int, eng: Int) {
+  }
+  
 }

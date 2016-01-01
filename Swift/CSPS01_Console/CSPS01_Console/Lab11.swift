@@ -60,7 +60,7 @@ class Lab11 {
     beta.printStatus()
     print("")
     
-    print("-- If you successfully complete the program to here\n")
+    print("-- If you successfully complete the program to here")
     print("-- you are eligible for a total of 40 points")
     
     if (iShouldContinue() == false) {
@@ -84,7 +84,7 @@ class Lab11 {
     alpha.setProd(0)
     alpha.printStatus()
     
-    print("\n\n-- If you successfully complete the program to here\n")
+    print("-- If you successfully complete the program to here")
     print("-- you are eligible for a total of 50 points")
     
     if (iShouldContinue() == false) {
@@ -123,7 +123,7 @@ class Lab11 {
     alpha.printStatus()
     
     IO.print(with: "\nalpha's project team production is: ")
-    print("\(alpha.computeProjectTeamProduction())")
+    print("\(alpha.computeDailyProduction())")
     
     print("\n\nHere's gamma:")
     
@@ -131,7 +131,7 @@ class Lab11 {
     print("\n\nAnd here's gamma's daily report:")
     gamma.printDailyReport()
     
-    print("\n-- If you successfully complete the program to here\n")
+    print("\n-- If you successfully complete the program to here")
     print("-- you are eligible for a total of 80 points")
     
     if (iShouldContinue() == false) {
@@ -161,82 +161,64 @@ class Lab11 {
     print("\n-- If you successfully complete the program to here\n")
     print("-- you are eligible for a total of 100 points")
     
-    /* // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
+    // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     
-    if (iShouldContinue() == false)
-    return (EXIT_SUCCESS)
+    if (iShouldContinue() == false) {
+      EXIT_SUCCESS
+    }
     
-    print("\n------------------ Extra credit 1 -----------------------"
-    << endl
+    print("\n------------------ Extra credit 1 -----------------------")
     
-    print("Here's alpha:"
-    << endl
+    print("Here's alpha:")
     alpha.printStatus()
     
-    print("\n\nLet's remove 38 scientists from alpha:"
-    print(endl
-    
+    print("\nLet's remove 38 scientists from alpha:")
     alpha.addSci(-38)
     
-    print("\n\nHere's the resulting alpha:"
-    << endl
+    print("\nHere's the resulting alpha:")
     alpha.printStatus()
     
-    print(endl
-    << "\n-- If you successfully complete this section\n"
-    << "-- you are eligible for a total of 10 points of extra credit"
-    << endl
+    print("-- If you successfully complete this section")
+    print("-- you are eligible for a total of 10 points of extra credit")
     
-    if (iShouldContinue() == false)
-    return (EXIT_SUCCESS)
+    if (iShouldContinue() == false) {
+      EXIT_SUCCESS
+    }
     
-    print("\n------------------ Extra credit 2 -----------------------"
-    << endl
+    print("\n------------------ Extra credit 2 -----------------------")
     
-    print("Here's alpha: \n"
+    print("Here's alpha:")
     alpha.printStatus()
     
-    print("\n\nAnd here's gamma:"
-    << endl
+    print("\nAnd here's gamma:")
     gamma.printStatus()
     
-    print("\n\nLet's try & transfer 5 sci and 1 eng from gamma to alpha."
-    << endl
+    print("\nLet's try & transfer 5 sci and 1 eng from gamma to alpha.")
     
-    alpha.transfer_personnel(gamma, 5, 1)
-    print("\nHere's alpha:"
-    print(endl
+    alpha.transferPersonnel(gamma, sci: 5, eng: 1)
+    print("\nHere's alpha:")
     
     alpha.printStatus()
     
-    print("\n\nAnd here's gamma:"
-    << endl
+    print("\nAnd here's gamma:")
     gamma.printStatus()
     
-    print("\n\nLet's try and transfer 75 sci from gamma to alpha"
-    << endl
-    alpha.transfer_personnel(gamma, 75, 0)
-    print(endl
-    << "Alpha should not have changed, here it is: "
-    << endl
+    print("\nLet's try and transfer 75 sci from gamma to alpha")
+    alpha.transferPersonnel(gamma, sci: 75, eng: 0)
+    print("Alpha should not have changed, here it is:")
     alpha.printStatus()
     
-    print(endl
-    << "\n-- If you successfully complete both extra credits\n"
-    << "-- you are eligible for a total of 20 points of extra credit"
-    << endl
-    <<endl
+    print("\n-- If you successfully complete both extra credits")
+    print("-- you are eligible for a total of 20 points of extra credit")
     
     // END OF EXTRA CREDIT
     // END OF EXTRA CREDIT
     // END OF EXTRA CREDIT
     // END OF EXTRA CREDIT
     // END OF EXTRA CREDIT
-    
-    */
   }
 }
