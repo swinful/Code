@@ -14,11 +14,7 @@ class IO {
   }
   
   static func getInput() -> NSString {
-    let fileHandle = NSFileHandle.fileHandleWithStandardInput()
-    let data = fileHandle.availableData
-    let inputStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-    
-    return inputStr!
+    return NSString(string: readLine()!)
   }
   
   static func getPositiveInteger64() -> Int64 {
