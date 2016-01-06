@@ -12,14 +12,15 @@ class Lab11 {
   
   // Private Methods
   private func iShouldContinue() -> Bool {
+    var outcome = false
     IO.print(with: "\n\nDo you want to continue (type y for yes)? ")
-    let ans = IO.getInput().characterValue
-    print("")
-    if ((ans == "y") || (ans == "Y" )) {
-      return true
-    } else {
-      return false
+    // let ans = IO.getInput().characterValue
+    if let ans = readLine() {
+      if ((ans == "y") || (ans == "Y" )) {
+        outcome = true
+      }
     }
+    return outcome
   }
   
   // MARK: Main
@@ -44,7 +45,7 @@ class Lab11 {
     alpha.printStatus()
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 2 -----------------------")
@@ -64,7 +65,7 @@ class Lab11 {
     print("-- you are eligible for a total of 40 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 3 -----------------------")
@@ -88,7 +89,7 @@ class Lab11 {
     print("-- you are eligible for a total of 50 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 4 -----------------------")
@@ -114,7 +115,7 @@ class Lab11 {
     print("-- you are eligible for a total of 60 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 5 -----------------------")
@@ -135,7 +136,7 @@ class Lab11 {
     print("-- you are eligible for a total of 80 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 6 -----------------------")
@@ -168,7 +169,7 @@ class Lab11 {
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Extra credit 1 -----------------------")
@@ -186,7 +187,7 @@ class Lab11 {
     print("-- you are eligible for a total of 10 points of extra credit")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Extra credit 2 -----------------------")
