@@ -1,8 +1,6 @@
 #! /usr/bin/env perl
-# Desc: Simple Mx search/replace script. 
-#     Warns if the folder is potentially not a valid Mx folder.
-# 
-#
+#  
+# Collects and sends metrics to a remote graphite server
 #
 
 use IO::Socket;
