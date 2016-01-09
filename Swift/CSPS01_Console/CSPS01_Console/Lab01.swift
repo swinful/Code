@@ -17,17 +17,12 @@
 
 class Lab01 {
   
-  private var yearOfBirth: Int
-  private var age:         Int
-  
-  init() {
-    age         = 0
-    yearOfBirth = 0
-  }
+  private var yearOfBirth: Int = 0
+  private var age:         Int = 0
   
   private func setYearOfBirth() {
     IO.print(with: "Please enter the year of your birth: ")
-    yearOfBirth = IO.getInput().integerValue
+    yearOfBirth = IO.readStdin().integerValue
   }
   
   private func calculateAge() {

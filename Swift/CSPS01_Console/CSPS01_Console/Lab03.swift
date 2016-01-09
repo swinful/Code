@@ -21,7 +21,7 @@ class Lab03 {
   // MARK: Problem One
   func promptForInches() {
     IO.print(with: "Please enter the length of your object in inches: ")
-    inches = IO.getInput().integerValue
+    inches = IO.readStdin().integerValue
   }
   
   func calculateFeetAndInches(inches: Int) {
@@ -47,19 +47,19 @@ class Lab03 {
   // MARK: Problem Two
   func collectAndPerformFacts() {
     IO.print(with: "Account number: ")
-    accountNumber = IO.getInput().integerValue
+    accountNumber = IO.readStdin().integerValue
     
     IO.print(with: "Account balance: ")
-    balance = IO.getInput().doubleValue
+    balance = IO.readStdin().doubleValue
     
     IO.print(with: "Account total charges: ")
-    totalCharges = IO.getInput().doubleValue
+    totalCharges = IO.readStdin().doubleValue
     
     IO.print(with: "Account total payments: ")
-    totalPayments = IO.getInput().doubleValue
+    totalPayments = IO.readStdin().doubleValue
     
     IO.print(with: "Allowed credit limit: ")
-    allowedLimit = IO.getInput().doubleValue
+    allowedLimit = IO.readStdin().doubleValue
     
     let newBalance = balance + totalCharges - totalPayments
     
@@ -133,7 +133,7 @@ class Lab03 {
   
   func collectWholeCentsAndPrintBills() {
     IO.print(with: "Enter whole number of cents: ")
-    totalPennies = IO.getInput().integerValue
+    totalPennies = IO.readStdin().integerValue
     let tens     = numberOfDollars(from: Bill.Ten)
     let fives    = numberOfDollars(from: Bill.Five)
     let ones     = numberOfCoins(from: Coin.Dollar)

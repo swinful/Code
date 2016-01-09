@@ -13,7 +13,7 @@ class Lab11 {
   // Private Methods
   private func iShouldContinue() -> Bool {
     IO.print(with: "\n\nDo you want to continue (type y for yes)? ")
-    let ans = IO.getInput().characterValue
+    let ans = IO.readStdin().characterValue
     print("")
     if ((ans == "y") || (ans == "Y" )) {
       return true

@@ -58,7 +58,7 @@ class Lab06 {
   func problemOne() {
     IO.print(with: "\n\nLab 6, Assignment #1\n")
     IO.print(with: "Please enter a word beginning and ending with a *: ")
-    let stringValue = String(IO.getInput()).uppercaseString
+    let stringValue = String(IO.readStdin()).uppercaseString
     print("\(stringValue)")
   }
   
@@ -80,7 +80,7 @@ class Lab06 {
   func problemTwo() {
     IO.print(with: "\n\nLab 6, Assignment #2\n")
     IO.print(with: "Please enter a word beginning and ending with a *: ")
-    let stringValue = String(IO.getInput())
+    let stringValue = String(IO.readStdin())
     for character in stringValue.characters {
       IO.print(with: "\(toggleCase(character))")
     }
@@ -89,10 +89,10 @@ class Lab06 {
   // MARK: Problem Three
   func getOddInt() -> Int {
     IO.print(with: "Please enter an odd integer: ")
-    var anInt = IO.getInput().integerValue
+    var anInt = IO.readStdin().integerValue
     while(anInt % 2 == 0) {
       IO.print(with: "\(anInt) is not odd, please try again: ")
-      anInt = IO.getInput().integerValue
+      anInt = IO.readStdin().integerValue
     }
     
     return anInt
@@ -146,7 +146,7 @@ class Lab06 {
   func getSymbolCharacter() -> Character {
     let message = "Please enter a symbol: "
     IO.print(with: message)
-    let symbolString = String(IO.getInput())
+    let symbolString = String(IO.readStdin())
     let symbol = symbolString[symbolString.startIndex]
     return symbol
   }

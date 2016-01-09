@@ -44,7 +44,7 @@ class Lab02 {
   private func promptForEven() {
     print("Lab 02: #6 -----------------------------------------")
     IO.print(with: "Please enter an even number integer: ")
-    if (IO.getInput().integerValue % 2 == 0) {
+    if (IO.readStdin().integerValue % 2 == 0) {
       print("Thank you.")
     } else {
       print("That was not an even number.")
@@ -54,7 +54,7 @@ class Lab02 {
   
   private func getWeightOfCereal() {
     IO.print(with: "Please enter the weight of the cereal in ounces: ")
-    cerealInOunces = IO.getInput().doubleValue
+    cerealInOunces = IO.readStdin().doubleValue
   }
   
   private func computeWeightInMetricTons() {
@@ -68,7 +68,7 @@ class Lab02 {
   private func getInts(howMany: Int) {
     for (var i = 0; i < howMany; ++i) {
       IO.print(with: "Enter an integer: ")
-      ourInts.append(IO.getInput().integerValue)
+      ourInts.append(IO.readStdin().integerValue)
     }
   }
   
@@ -101,7 +101,7 @@ class Lab02 {
     IO.print(with: "Please enter three positive integers below.\n")
     for i in 1...3 {
       IO.print(with: "Integer #\(i): ")
-      let enteredInt = IO.getInput().integerValue
+      let enteredInt = IO.readStdin().integerValue
       if isNegative(enteredInt) {
         print("Negative integers are not allowed.")
         exit(1)

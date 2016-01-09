@@ -45,10 +45,10 @@ class Lab08 {
   func returnTwoCharacters() {
   
     IO.print(with: "Please enter first character: ")
-    var char1 = IO.getInput().characterValue
+    var char1 = IO.readStdin().characterValue
     
     IO.print(with: "Please enter second character: ")
-    var char2 = IO.getInput().characterValue
+    var char2 = IO.readStdin().characterValue
     
     print("The first and second character entered were: \(char1) \(char2)\n")
     swapCharacters(first: &char1, second: &char2)

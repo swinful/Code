@@ -13,23 +13,19 @@ class IO {
     Swift.print(message, terminator: "")
   }
   
-  static func getInput() -> NSString {
-    let fileHandle = NSFileHandle.fileHandleWithStandardInput()
-    let data = fileHandle.availableData
-    let inputStr = NSString(data: data, encoding: NSUTF8StringEncoding)
-    
-    return inputStr!
+  static func readStdin() -> NSString {
+    return NSString(string: Swift.readLine()!)
   }
   
   static func getPositiveInteger64() -> Int64 {
     let message = "Please enter a long integer: "
     
     print(with: message)
-    var positiveInteger64 = IO.getInput().integerValue64
+    var positiveInteger64 = IO.readStdin().integerValue64
     
     while positiveInteger64 < 0 {
       print(with: message)
-      positiveInteger64 = IO.getInput().integerValue64
+      positiveInteger64 = IO.readStdin().integerValue64
     }
     return positiveInteger64
   }
@@ -37,22 +33,22 @@ class IO {
   static func getPositiveInteger(message: String = "Please enter a positive integer: ") -> Int {
     
     print(with: message)
-    var positiveInteger = IO.getInput().integerValue
+    var positiveInteger = IO.readStdin().integerValue
     
     while positiveInteger < 0 {
       print(with: message)
-      positiveInteger = IO.getInput().integerValue
+      positiveInteger = IO.readStdin().integerValue
     }
     return positiveInteger
   }
   
   static func getPositiveDouble() -> Double {
     print(with: "Please enter a positive double: ")
-    var positiveDouble = IO.getInput().doubleValue
+    var positiveDouble = IO.readStdin().doubleValue
     
     while positiveDouble < 0.0 {
       print(with: "Please enter a positive double: ")
-      positiveDouble = IO.getInput().doubleValue
+      positiveDouble = IO.readStdin().doubleValue
     }
     return positiveDouble
   }

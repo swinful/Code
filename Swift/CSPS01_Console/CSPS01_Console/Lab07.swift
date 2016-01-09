@@ -14,7 +14,7 @@ class Lab07 {
   func tupleOfThreeInts() -> (Int, Int, Int) {
     let message = "Please enter the time as three integers (w/ spaces): "
     IO.print(with: message)
-    let stringOfThree = String(IO.getInput()).componentsSeparatedByString(" ")
+    let stringOfThree = String(IO.readStdin()).componentsSeparatedByString(" ")
     
     var intArray = [Int]()
     var count    = 0
@@ -26,13 +26,13 @@ class Lab07 {
       case 0: // check for valid hours
         while intArray[count] > 12 || intArray[count] < 1 {
           IO.print(with: "\(intArray[count]) is not between 1 and 12, please reenter: ")
-          intArray[count] = IO.getInput().integerValue
+          intArray[count] = IO.readStdin().integerValue
         }
         
       case 1, 2: // check for valid minutes
         while intArray[count] > 59 || intArray[count] < 0 {
           IO.print(with: "\(intArray[count]) is not between 0 and 59, please reenter: ")
-          intArray[count] = IO.getInput().integerValue
+          intArray[count] = IO.readStdin().integerValue
         }
         
         default: break
@@ -72,10 +72,10 @@ class Lab07 {
   func problemFour() {
     IO.print(with: "\n\nLab 7, Assignment #4\n")
     IO.print(with: "Please enter starting number: ")
-    var startNumber = IO.getInput().integerValue
+    var startNumber = IO.readStdin().integerValue
     
     IO.print(with: "Please enter number of hailstones: ")
-    let numberOfHailstones = IO.getInput().integerValue
+    let numberOfHailstones = IO.readStdin().integerValue
     
     IO.print(with: "\(numberOfHailstones) hailstones starting at \(startNumber) are: ")
     for _ in 0..<numberOfHailstones {
@@ -100,7 +100,7 @@ class Lab07 {
   func problemFive() {
     IO.print(with: "\n\nLab 7, Assignment #5\n")
     IO.print(with: "Please enter a year: ")
-    let year = IO.getInput().integerValue
+    let year = IO.readStdin().integerValue
     if isLeapYear(year) {
       print("\(year) is a leap year.")
     } else {

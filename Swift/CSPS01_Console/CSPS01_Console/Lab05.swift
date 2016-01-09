@@ -90,7 +90,7 @@ class Lab05 {
   func problemOne() {
     IO.print(with: "\n\nLab 5, Assignment #1\n")
     IO.print(with: "Please enter a character: ")
-    let response = String(IO.getInput())
+    let response = String(IO.readStdin())
     let character = response[response.startIndex]
     for _ in 0..<5 {
       IO.print(with: "\(character)")
@@ -103,7 +103,7 @@ class Lab05 {
   func problemTwo() {
     IO.print(with: "\n\nLab 5, Assignment #2\n")
     IO.print(with: "Please enter a character: ")
-    let response = String(IO.getInput())
+    let response = String(IO.readStdin())
     let character = response[response.startIndex]
     for _ in 0..<3 {
       for _ in 0..<5 {
@@ -117,13 +117,13 @@ class Lab05 {
   func problemThree() {
     IO.print(with: "\n\nLab 5, Assignment #3\n")
     IO.print(with: "Please enter the number of columns: ")
-    let columns = IO.getInput().integerValue
+    let columns = IO.readStdin().integerValue
     
     IO.print(with: "Please enter the number of rows: ")
-    let rows = IO.getInput().integerValue
+    let rows = IO.readStdin().integerValue
     
     IO.print(with: "Please enter the character to print: ")
-    let string = String(IO.getInput())
+    let string = String(IO.readStdin())
     let character = string[string.startIndex]
     
     for _ in 0..<rows {
@@ -159,7 +159,7 @@ class Lab05 {
   func problemSix() {
     IO.print(with: "\n\nLab 5, Assignment #6\n")
     IO.print(with: "Please enter the number of lines: ")
-    let lines = IO.getInput().integerValue
+    let lines = IO.readStdin().integerValue
     for _ in 0..<lines {
       for i in 1...5 {
         IO.print(with: "\(i)")
@@ -171,10 +171,10 @@ class Lab05 {
   func problemSeven() {
     IO.print(with: "\n\nLab 5, Assignment #7\n")
     IO.print(with: "Please enter the number of columns: ")
-    let columns = IO.getInput().integerValue
+    let columns = IO.readStdin().integerValue
     
     IO.print(with: "Please enter the number of rows: ")
-    let rows = IO.getInput().integerValue
+    let rows = IO.readStdin().integerValue
     
     for _ in 0..<rows {
       for i in 1...columns {

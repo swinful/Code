@@ -57,13 +57,13 @@ class Date {
     
     repeat {
       IO.print(with: "Enter a year 1753 or later: ")
-      year = IO.getInput().integerValue
+      year = IO.readStdin().integerValue
       
       IO.print(with: "Enter month (1-12): ")
-      month = IO.getInput().integerValue
+      month = IO.readStdin().integerValue
       
       IO.print(with: "Enter day (1-31): ")
-      day = IO.getInput().integerValue
+      day = IO.readStdin().integerValue
       
       if !isLegalDate(month: month, day: day, year: year) {
         Swift.print("\nILLEGAL DATE!!!\nPlease try again\n")

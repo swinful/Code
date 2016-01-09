@@ -38,7 +38,7 @@ class Lab04 {
   func askForPositiveIntegerWithCharacter() -> (Int, Character) {
    let ourInteger = askForPositiveInteger()
     IO.print(with: "Enter a single character: ")
-    let ourCharString = IO.getInput() as String
+    let ourCharString = IO.readStdin() as String
     let ourChar = ourCharString[ourCharString.startIndex]
     
     return (ourInteger, ourChar)
@@ -46,10 +46,10 @@ class Lab04 {
   
   func askForPositiveInteger() -> Int {
     IO.print(with: "Enter a Positive Integer: ")
-    positiveInteger = IO.getInput().integerValue
+    positiveInteger = IO.readStdin().integerValue
     while positiveInteger < 1 {
       IO.print(with: "Enter Positive Integer: ")
-      positiveInteger = IO.getInput().integerValue
+      positiveInteger = IO.readStdin().integerValue
     }
     return positiveInteger
   }
@@ -69,12 +69,12 @@ class Lab04 {
     IO.print(with: "\n\nLab 4, Assignment #2\n")
     IO.print(with: "Enter number: ")
     
-    var numberEntered = IO.getInput().doubleValue
+    var numberEntered = IO.readStdin().doubleValue
     var count = 0
     
     while !isNumberEven(numberEntered) {
       IO.print(with: "Enter number: ")
-      numberEntered = IO.getInput().doubleValue
+      numberEntered = IO.readStdin().doubleValue
       ++count
     }
     print("We read \(count) odd numbers.")
@@ -84,13 +84,13 @@ class Lab04 {
   func problemThree() {
     IO.print(with: "\n\nLab 4, Assignment #3\n")
     IO.print(with: "Please enter integers to total, ending with 0: ")
-    var enteredInt = IO.getInput().integerValue
+    var enteredInt = IO.readStdin().integerValue
     var sum = 0
     while (enteredInt != 0) {
       sum += enteredInt
       print("Added: \(enteredInt); total = \(sum)")
       IO.print(with: "Enter an integer: ")
-      enteredInt = IO.getInput().integerValue
+      enteredInt = IO.readStdin().integerValue
     }
   }
   
@@ -133,7 +133,7 @@ class Lab04 {
   func problemSeven() {
     IO.print(with: "\n\nLab 4, Assignment #7\n")
     IO.print(with: "Please enter a sentence terminated by a period: ")
-    let string = IO.getInput() as String
+    let string = IO.readStdin() as String
     var vowelCount = 0
     
     for char in string.characters {
