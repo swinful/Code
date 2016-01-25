@@ -46,12 +46,16 @@ class ProjectTeam {
   things so that you can't have a negative number of scientists
   if you do the extra credit.
   */
-  func addSci(sci: Int) {
+  func addSci(sci: Int) -> Bool {
+    var outcome = false
     if sci < 0 {
       scientiest = 1
     } else {
       scientiest += sci
+      outcome = true
     }
+    
+    return outcome
   }
   
   // adds eng engineers to this ProjectTeam. Note that if eng < 0
@@ -109,7 +113,7 @@ class ProjectTeam {
     
     let dScientist = NSNumber(integer: scientiest).doubleValue
     let dEngineer  = NSNumber(integer: engineer).doubleValue
-    let production = dScientist * dEngineer / productionFactor
+    let production = (dScientist * dEngineer) / productionFactor
     
     return production
   }
@@ -158,7 +162,15 @@ class ProjectTeam {
    * YOU ADD STUFF HERE IF YOU DO EXTRA CREDIT
    **/
   // Let's try and transfer 75 sci from gamma to alpha
-  func transferPersonnel(team: ProjectTeam, sci: Int, eng: Int) {
+  func transferPersonnel(inout fromTeam team: ProjectTeam, sci: Int, eng: Int) {
+    team.scientiest -= sci
+    team.engineer   -= eng
+    // team.addSci(-sci)
+    // team.addEng(-eng)
+    self.scientiest += sci
+    self.engineer   += eng
+    // self.addSci(sci)
+    // self.addEng(eng)
   }
   
 }

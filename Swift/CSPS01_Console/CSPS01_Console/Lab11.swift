@@ -12,14 +12,14 @@ class Lab11 {
   
   // Private Methods
   private func iShouldContinue() -> Bool {
+    var outcome = false
     IO.print(with: "\n\nDo you want to continue (type y for yes)? ")
-    let ans = IO.readStdin().characterValue
-    print("")
-    if ((ans == "y") || (ans == "Y" )) {
-      return true
-    } else {
-      return false
+    if let ans = readLine() {
+      if ((ans == "y") || (ans == "Y" )) {
+        outcome = true
+      }
     }
+    return outcome
   }
   
   // MARK: Main
@@ -44,7 +44,7 @@ class Lab11 {
     alpha.printStatus()
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 2 -----------------------")
@@ -64,7 +64,7 @@ class Lab11 {
     print("-- you are eligible for a total of 40 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 3 -----------------------")
@@ -88,7 +88,7 @@ class Lab11 {
     print("-- you are eligible for a total of 50 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 4 -----------------------")
@@ -96,7 +96,7 @@ class Lab11 {
     print("\n\nCreate gamma, delta, and epsilon")
     print("Gamma has 25 sci, 4 eng, and 8.26 prod")
     
-    let gamma = ProjectTeam(sci: 25, eng: 4, prod: 8.26)
+    var gamma = ProjectTeam(sci: 25, eng: 4, prod: 8.26)
     gamma.printStatus()
     
     print("\nDelta is going to be created with 0 eng, so it")
@@ -114,7 +114,7 @@ class Lab11 {
     print("-- you are eligible for a total of 60 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 5 -----------------------")
@@ -135,7 +135,7 @@ class Lab11 {
     print("-- you are eligible for a total of 80 points")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Part 6 -----------------------")
@@ -168,7 +168,7 @@ class Lab11 {
     // UNCOMMENT THIS SECTION IF YOU DO THE EXTRA CREDIT
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Extra credit 1 -----------------------")
@@ -186,7 +186,7 @@ class Lab11 {
     print("-- you are eligible for a total of 10 points of extra credit")
     
     if (iShouldContinue() == false) {
-      EXIT_SUCCESS
+      return
     }
     
     print("\n------------------ Extra credit 2 -----------------------")
@@ -199,7 +199,7 @@ class Lab11 {
     
     print("\nLet's try & transfer 5 sci and 1 eng from gamma to alpha.")
     
-    alpha.transferPersonnel(gamma, sci: 5, eng: 1)
+    alpha.transferPersonnel(fromTeam: &gamma, sci: 5, eng: 1)
     print("\nHere's alpha:")
     
     alpha.printStatus()
@@ -208,7 +208,7 @@ class Lab11 {
     gamma.printStatus()
     
     print("\nLet's try and transfer 75 sci from gamma to alpha")
-    alpha.transferPersonnel(gamma, sci: 75, eng: 0)
+    alpha.transferPersonnel(fromTeam: &gamma, sci: 75, eng: 0)
     print("Alpha should not have changed, here it is:")
     alpha.printStatus()
     
