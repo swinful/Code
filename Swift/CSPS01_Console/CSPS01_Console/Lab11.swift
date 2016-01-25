@@ -97,7 +97,7 @@ class Lab11 {
     print("\n\nCreate gamma, delta, and epsilon")
     print("Gamma has 25 sci, 4 eng, and 8.26 prod")
     
-    let gamma = ProjectTeam(sci: 25, eng: 4, prod: 8.26)
+    var gamma = ProjectTeam(sci: 25, eng: 4, prod: 8.26)
     gamma.printStatus()
     
     print("\nDelta is going to be created with 0 eng, so it")
@@ -200,7 +200,7 @@ class Lab11 {
     
     print("\nLet's try & transfer 5 sci and 1 eng from gamma to alpha.")
     
-    alpha.transferPersonnel(gamma, sci: 5, eng: 1)
+    alpha.transferPersonnel(fromTeam: &gamma, sci: 5, eng: 1)
     print("\nHere's alpha:")
     
     alpha.printStatus()
@@ -209,7 +209,7 @@ class Lab11 {
     gamma.printStatus()
     
     print("\nLet's try and transfer 75 sci from gamma to alpha")
-    alpha.transferPersonnel(gamma, sci: 75, eng: 0)
+    alpha.transferPersonnel(fromTeam: &gamma, sci: 75, eng: 0)
     print("Alpha should not have changed, here it is:")
     alpha.printStatus()
     
