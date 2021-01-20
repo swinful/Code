@@ -4,6 +4,7 @@
 # Author: Samuel A WINFUL
 
 from user import User
+from admin import Admin
 
 print("9-3: Users")
 user1 = User("Samuel", "Winful")
@@ -30,3 +31,8 @@ print(f"{new_user.first_name} logins: {new_user.login_attempts}")
 
 new_user.reset_login_attempts()
 print(f"{new_user.first_name} logins: {new_user.login_attempts}")
+
+
+print("9-7: Admin")
+admin = Admin("Bill", "Gates")
+print(admin.privileges)
