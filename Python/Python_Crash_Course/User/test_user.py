@@ -32,7 +32,6 @@ print(f"{new_user.first_name} logins: {new_user.login_attempts}")
 new_user.reset_login_attempts()
 print(f"{new_user.first_name} logins: {new_user.login_attempts}")
 
-
-print("9-7: Admin")
+print("\n9-7/9-8: Admin")
 admin = Admin("Bill", "Gates")
-print(admin.privileges)
+print(admin.privilege.show_privileges())

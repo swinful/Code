@@ -3,6 +3,8 @@
 # Created: Monday, January 20, 2021
 # Filename: car.py
 
+"""A class that can be used to represent a car."""
+
 class Car:
     """A simple attempt to represent a car."""
 
