@@ -1,0 +1,8 @@
+A few lines summarizing what I have learned about python.
+  - Dynamically typed
+  - Somewhat easy to read
+  - Requires paying attention to formatting
+  - Easy to learn
+
+Classes are straight forward, like most OOP languages. Wish I would have 
+taken the time to learn Pythong earlier.
