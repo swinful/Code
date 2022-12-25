@@ -5,4 +5,4 @@ A few lines summarizing what I have learned about python.
   - Easy to learn
 
 Classes are straight forward, like most OOP languages. Wish I would have 
-taken the time to learn Pythong earlier.
+taken the time to learn Python earlier.
